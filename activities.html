@@ -196,6 +196,24 @@
             margin-bottom: 12px;
         }
 
+        /* ACTIVITY IMAGES */
+
+        .activity-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin-top: 28px;
+        }
+
+        .activity-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 14px;
+            display: block;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+        }
+
         /* ACTIVITY CARDS */
 
         .activities {
@@ -251,6 +269,15 @@
 
         .feature h2 {
             margin-bottom: 15px;
+        }
+
+        .feature-image {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 14px;
+            display: block;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.10);
         }
 
         /* CTA */
@@ -443,6 +470,19 @@
             .section h2 {
                 font-size: 24px;
             }
+
+            .activity-images {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .activity-image {
+                height: 240px;
+            }
+
+            .feature-image {
+                height: 240px;
+            }
         }
 
     </style>
@@ -573,7 +613,6 @@
             class="watermark"
         >
 
-
         <div class="hero-content">
 
             <img
@@ -582,11 +621,9 @@
                 class="hero-logo"
             >
 
-
             <h2>
                 School Activities
             </h2>
-
 
             <p>
                 Learning, participation, creativity and community
@@ -611,7 +648,6 @@
                 Our Activities
             </h2>
 
-
             <p>
                 Activities are an important part of the learning
                 experience at Rohingya Education School. They help
@@ -619,12 +655,30 @@
                 skills and cooperation.
             </p>
 
-
             <p>
                 Our activities are connected with education and the
                 development of a positive and supportive learning
                 environment.
             </p>
+
+
+            <!-- TWO SCHOOL IMAGES -->
+
+            <div class="activity-images">
+
+                <img
+                    src="school-photo.jpg"
+                    alt="Rohingya Education School"
+                    class="activity-image"
+                >
+
+                <img
+                    src="sa.jpg"
+                    alt="School Activity"
+                    class="activity-image"
+                >
+
+            </div>
 
         </section>
 
@@ -767,13 +821,11 @@
                         Building a Learning Community
                     </h2>
 
-
                     <p>
                         Education is more than classroom learning.
                         Students also learn through participation,
                         cooperation and interaction with others.
                     </p>
-
 
                     <p>
                         Our activities aim to create a welcoming
@@ -786,24 +838,11 @@
 
                 <div>
 
-                    <div
-                        style="
-                            width:100%;
-                            height:320px;
-                            border-radius:14px;
-                            background:#e8f5e9;
-                            display:flex;
-                            align-items:center;
-                            justify-content:center;
-                            text-align:center;
-                            color:#14532d;
-                            font-size:24px;
-                            font-weight:bold;
-                            padding:20px;
-                        "
+                    <img
+                        src="sa.jpg"
+                        alt="School Activity"
+                        class="feature-image"
                     >
-                        Rohingya Education School
-                    </div>
 
                 </div>
 
@@ -819,7 +858,6 @@
             <h2>
                 Future Activities
             </h2>
-
 
             <p>
                 As the school develops, additional educational,
@@ -839,12 +877,10 @@
                 Explore Our Courses
             </h2>
 
-
             <p>
                 Learn more about the educational courses available
                 through Rohingya Education School.
             </p>
-
 
             <a
                 href="courses.html"
