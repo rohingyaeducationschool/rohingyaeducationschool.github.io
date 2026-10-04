@@ -1,1956 +1,1964 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rohingya Education School</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7f6;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-    <meta charset="UTF-8">
+.header-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-    <title>Rohingya Education School</title>
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 
+    text-decoration: none;
+    color: #14532d;
+}
 
-    <style>
+.brand img {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 50%;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+.brand-text h1 {
+    font-size: 20px;
+    line-height: 1.2;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+.brand-text p {
+    font-size: 11px;
+    color: #64748b;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7f6;
-            color: #1f2937;
-            line-height: 1.6;
-        }
+nav ul {
+    list-style: none;
 
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
-        /* =========================
-           HEADER
-        ========================= */
+nav a {
+    display: block;
 
-        header {
-            background: #ffffff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-        }
+    padding: 9px 11px;
 
-        .header-inner {
-            max-width: 1200px;
-            margin: auto;
-            padding: 14px 20px;
+    color: #334155;
+    text-decoration: none;
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+    border-radius: 7px;
 
-            gap: 20px;
-        }
+    font-size: 14px;
+}
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+nav a:hover,
+nav a.active {
+    background: #e8f5e9;
+    color: #14532d;
+}
 
-            text-decoration: none;
-            color: #14532d;
-        }
+.menu-btn {
+    display: none;
 
-        .brand img {
-            width: 58px;
-            height: 58px;
-            border-radius: 50%;
-            object-fit: contain;
-        }
+    border: none;
+    background: #14532d;
+    color: white;
 
-        .brand-text h1 {
-            font-size: 21px;
-        }
+    font-size: 24px;
 
-        .brand-text p {
-            font-size: 12px;
-            color: #64748b;
-        }
+    padding: 5px 10px;
+    border-radius: 7px;
 
+    cursor: pointer;
+}
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+/* =========================
+   HERO
+========================= */
 
-        nav ul {
-            list-style: none;
+.hero {
+    min-height: 500px;
 
-            display: flex;
-            align-items: center;
+    background:
+        linear-gradient(
+            rgba(20,83,45,0.88),
+            rgba(20,83,45,0.88)
+        );
 
-            gap: 4px;
-            flex-wrap: wrap;
-        }
+    position: relative;
 
-        nav a {
-            text-decoration: none;
-            color: #334155;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-            padding: 9px 10px;
+    text-align: center;
 
-            border-radius: 7px;
+    color: white;
 
-            font-size: 14px;
+    overflow: hidden;
+}
 
-            display: block;
-        }
+.watermark {
+    position: absolute;
 
-        nav a:hover,
-        nav a.active {
-            background: #e8f5e9;
-            color: #14532d;
-        }
+    width: 500px;
+    max-width: 80%;
 
-        .menu-btn {
-            display: none;
+    opacity: 0.07;
 
-            background: #14532d;
-            color: white;
+    pointer-events: none;
+}
 
-            border: none;
+.hero-content {
+    position: relative;
+    z-index: 2;
 
-            padding: 9px 12px;
-            border-radius: 7px;
+    padding: 30px 20px;
+}
 
-            font-size: 22px;
+.hero-logo {
+    width: 170px;
+    height: 170px;
 
-            cursor: pointer;
-        }
+    object-fit: cover;
 
+    border-radius: 50%;
 
-        /* =========================
-           HERO
-        ========================= */
+    border: 5px solid white;
 
-        .hero {
-            position: relative;
+    margin-bottom: 20px;
+}
 
-            min-height: 480px;
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+.hero p {
+    font-size: 18px;
+}
 
-            text-align: center;
+/* =========================
+   MAIN
+========================= */
 
-            overflow: hidden;
+.container {
+    max-width: 1100px;
 
-            background:
-                linear-gradient(
-                    rgba(8,45,25,0.96),
-                    rgba(8,45,25,0.96)
-                );
+    margin: auto;
 
-            color: white;
-        }
+    padding: 60px 20px;
+}
 
-        .watermark {
-            position: absolute;
+.section {
+    margin-bottom: 60px;
+}
 
-            width: 500px;
-            max-width: 75%;
+.section-title {
+    text-align: center;
 
-            opacity: 0.10;
+    color: #14532d;
 
-            object-fit: contain;
+    font-size: 30px;
 
-            top: 50%;
-            left: 50%;
+    margin-bottom: 12px;
+}
 
-            transform:
-                translate(-50%, -50%);
+.section-intro {
+    max-width: 760px;
 
-            pointer-events: none;
-        }
+    margin: 0 auto 30px;
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
+    text-align: center;
 
-            max-width: 850px;
+    color: #64748b;
+}
 
-            padding: 55px 20px;
-        }
+/* =========================
+   CARDS
+========================= */
 
-        .hero-logo {
-            width: 180px;
-            height: 180px;
+.cards {
+    display: grid;
 
-            object-fit: contain;
+    grid-template-columns:
+        repeat(3, 1fr);
 
-            border-radius: 50%;
+    gap: 22px;
+}
 
-            margin-bottom: 25px;
+.card {
+    background: #ffffff;
 
-            filter:
-                drop-shadow(
-                    0 8px 18px rgba(0,0,0,0.25)
-                );
-        }
+    padding: 28px 22px;
 
-        .hero h2 {
-            font-size: 42px;
-            margin-bottom: 12px;
-        }
+    border-radius: 15px;
 
-        .hero p {
-            font-size: 18px;
-        }
+    box-shadow:
+        0 4px 18px rgba(0,0,0,0.07);
 
+    border: 1px solid #e5e7eb;
 
-        /* =========================
-           MAIN
-        ========================= */
+    text-align: center;
+}
 
-        .container {
-            max-width: 1100px;
+.card h3 {
+    color: #14532d;
 
-            margin: auto;
+    margin-bottom: 10px;
 
-            padding: 60px 20px;
-        }
+    font-size: 20px;
+}
 
-        .section {
-            margin-bottom: 60px;
-        }
+.card p {
+    color: #64748b;
 
-        .section-title {
-            text-align: center;
+    font-size: 15px;
+}
 
-            color: #14532d;
+/* =========================
+   WELCOME
+========================= */
 
-            font-size: 30px;
+.welcome-box {
+    background: #ffffff;
 
-            margin-bottom: 12px;
-        }
+    padding: 35px;
 
-        .section-intro {
-            max-width: 760px;
+    border-radius: 18px;
 
-            margin: 0 auto 30px;
+    box-shadow:
+        0 5px 22px rgba(0,0,0,0.08);
 
-            text-align: center;
+    text-align: center;
+}
 
-            color: #64748b;
-        }
+.welcome-box h3 {
+    color: #14532d;
 
+    font-size: 25px;
 
-        /* =========================
-           CARDS
-        ========================= */
+    margin-bottom: 20px;
+}
 
-        .cards {
-            display: grid;
+.welcome-box p {
+    max-width: 800px;
 
-            grid-template-columns:
-                repeat(3, 1fr);
+    margin: auto;
 
-            gap: 22px;
-        }
+    color: #475569;
+}
 
-        .card {
-            background: #ffffff;
+.welcome-photo {
+    width: 100%;
 
-            padding: 28px 22px;
+    max-width: 900px;
 
-            border-radius: 15px;
+    height: 430px;
 
-            box-shadow:
-                0 4px 18px rgba(0,0,0,0.07);
+    object-fit: cover;
 
-            border: 1px solid #e5e7eb;
+    display: block;
 
-            text-align: center;
-        }
+    margin: 0 auto 25px;
 
-        .card h3 {
-            color: #14532d;
+    border-radius: 16px;
 
-            margin-bottom: 10px;
+    box-shadow:
+        0 6px 22px rgba(0,0,0,0.14);
+}
 
-            font-size: 20px;
-        }
+/* =========================
+   VERIFICATION CENTER
+========================= */
 
-        .card p {
-            color: #64748b;
+.verification-section {
+    background: #ffffff;
 
-            font-size: 15px;
-        }
+    padding: 40px 25px;
 
+    border-radius: 18px;
 
-        /* =========================
-           WELCOME
-        ========================= */
+    box-shadow:
+        0 5px 22px rgba(0,0,0,0.08);
+}
 
-        .welcome-box {
-            background: #ffffff;
+.verification-cards {
+    display: grid;
 
-            padding: 35px;
+    grid-template-columns:
+        repeat(3, 1fr);
 
-            border-radius: 18px;
+    gap: 22px;
 
-            box-shadow:
-                0 5px 22px rgba(0,0,0,0.08);
+    margin-top: 30px;
+}
 
-            text-align: center;
-        }
+.verification-card {
+    background: #f8faf9;
 
-        .welcome-box h3 {
-            color: #14532d;
+    border: 1px solid #dce9df;
 
-            font-size: 25px;
+    border-radius: 15px;
 
-            margin-bottom: 20px;
-        }
+    padding: 30px 20px;
 
-        .welcome-box p {
-            max-width: 800px;
+    text-align: center;
 
-            margin: auto;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
 
-            color: #475569;
-        }
+.verification-card:hover {
+    transform: translateY(-4px);
 
-        .welcome-photo {
-            width: 100%;
+    box-shadow:
+        0 8px 22px rgba(0,0,0,0.10);
+}
 
-            max-width: 900px;
+.verification-icon {
+    width: 65px;
+    height: 65px;
 
-            height: 430px;
+    margin: 0 auto 18px;
 
-            object-fit: cover;
+    border-radius: 50%;
 
-            display: block;
+    background: #e8f5e9;
 
-            margin: 0 auto 25px;
+    color: #14532d;
 
-            border-radius: 16px;
+    display: flex;
 
-            box-shadow:
-                0 6px 22px rgba(0,0,0,0.14);
-        }
+    align-items: center;
+    justify-content: center;
 
+    font-size: 30px;
+}
 
-        /* =========================
-           VERIFICATION CENTER
-        ========================= */
+.verification-card h3 {
+    color: #14532d;
 
-        .verification-section {
-            background: #ffffff;
+    font-size: 20px;
 
-            padding: 40px 25px;
+    margin-bottom: 10px;
+}
 
-            border-radius: 18px;
+.verification-card p {
+    color: #64748b;
 
-            box-shadow:
-                0 5px 22px rgba(0,0,0,0.08);
-        }
+    font-size: 14px;
 
-        .verification-cards {
-            display: grid;
+    margin-bottom: 18px;
+}
 
-            grid-template-columns:
-                repeat(3, 1fr);
+.verification-input {
+    width: 100%;
 
-            gap: 22px;
+    padding: 12px 13px;
 
-            margin-top: 30px;
-        }
+    border:
+        1px solid #cbd5e1;
 
-        .verification-card {
-            background: #f8faf9;
+    border-radius: 8px;
 
-            border: 1px solid #dce9df;
+    font-size: 15px;
 
-            border-radius: 15px;
+    text-align: center;
 
-            padding: 30px 20px;
+    outline: none;
 
-            text-align: center;
+    margin-bottom: 10px;
 
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
-        }
+    background: white;
+}
 
-        .verification-card:hover {
-            transform: translateY(-4px);
+.verification-input:focus {
+    border-color: #14532d;
 
-            box-shadow:
-                0 8px 22px rgba(0,0,0,0.10);
-        }
+    box-shadow:
+        0 0 0 3px
+        rgba(20,83,45,0.10);
+}
 
-        .verification-icon {
-            width: 65px;
-            height: 65px;
+.verification-btn {
+    width: 100%;
 
-            margin: 0 auto 18px;
+    background: #14532d;
 
-            border-radius: 50%;
+    color: white;
 
-            background: #e8f5e9;
+    border: none;
 
-            color: #14532d;
+    padding: 11px 20px;
 
-            display: flex;
+    border-radius: 8px;
 
-            align-items: center;
-            justify-content: center;
+    font-weight: bold;
 
-            font-size: 30px;
-        }
+    font-size: 14px;
 
-        .verification-card h3 {
-            color: #14532d;
+    cursor: pointer;
+}
 
-            font-size: 20px;
+.verification-btn:hover {
+    background: #0f3f22;
+}
 
-            margin-bottom: 10px;
-        }
+.verification-result {
+    margin-top: 18px;
 
-        .verification-card p {
-            color: #64748b;
+    display: none;
+}
 
-            font-size: 14px;
+.verification-result img {
+    width: 100%;
 
-            margin-bottom: 18px;
-        }
+    max-height: 500px;
 
+    object-fit: contain;
 
-        /* =========================
-           VERIFICATION INPUT
-        ========================= */
+    border-radius: 10px;
 
-        .verification-input {
-            width: 100%;
+    box-shadow:
+        0 4px 15px rgba(0,0,0,0.12);
+}
 
-            padding: 12px 13px;
+/* VERIFIED */
 
-            border:
-                1px solid #cbd5e1;
+.verified-badge {
+    color: #15803d;
 
-            border-radius: 8px;
+    background: #f0fdf4;
 
-            font-size: 15px;
+    border: 1px solid #bbf7d0;
 
-            text-align: center;
+    padding: 10px;
 
-            outline: none;
+    border-radius: 8px;
 
-            margin-bottom: 10px;
+    font-weight: bold;
 
-            background: white;
-        }
+    margin-bottom: 12px;
 
-        .verification-input:focus {
-            border-color: #14532d;
+    text-align: center;
 
-            box-shadow:
-                0 0 0 3px
-                rgba(20,83,45,0.10);
-        }
+    font-size: 16px;
+}
 
-        .verification-btn {
-            width: 100%;
+/* NOT FOUND */
 
-            background: #14532d;
+.not-found {
+    color: #b91c1c;
 
-            color: white;
+    background: #fef2f2;
 
-            border: none;
+    border:
+        1px solid #fecaca;
 
-            text-decoration: none;
+    padding: 10px;
 
-            padding: 11px 20px;
+    border-radius: 8px;
 
-            border-radius: 8px;
+    font-size: 14px;
+}
 
-            font-weight: bold;
+/* =========================
+   CTA
+========================= */
 
-            font-size: 14px;
+.cta {
+    background: #14532d;
 
-            cursor: pointer;
-        }
+    color: white;
 
-        .verification-btn:hover {
-            background: #0f3f22;
-        }
+    padding: 45px 25px;
 
-        .verification-result {
-            margin-top: 18px;
+    border-radius: 18px;
 
-            display: none;
-        }
+    text-align: center;
+}
 
-        .verification-result img {
-            width: 100%;
+.cta h2 {
+    margin-bottom: 12px;
 
-            max-height: 420px;
+    font-size: 30px;
+}
 
-            object-fit: contain;
+.cta p {
+    max-width: 700px;
 
-            border-radius: 10px;
+    margin: 0 auto 22px;
 
-            box-shadow:
-                0 4px 15px rgba(0,0,0,0.12);
-        }
+    opacity: 0.92;
+}
 
-        .not-found {
-            color: #b91c1c;
+.cta a {
+    display: inline-block;
 
-            background: #fef2f2;
+    background: white;
 
-            border:
-                1px solid #fecaca;
+    color: #14532d;
 
-            padding: 10px;
+    text-decoration: none;
 
-            border-radius: 8px;
+    padding: 12px 22px;
 
-            font-size: 14px;
-        }
+    border-radius: 8px;
 
+    font-weight: bold;
+}
 
-        /* =========================
-           CTA
-        ========================= */
+/* =========================
+   FOOTER
+========================= */
 
-        .cta {
-            background: #14532d;
+footer {
+    background: #102a1b;
 
-            color: white;
+    color: #dbeafe;
 
-            padding: 45px 25px;
+    margin-top: 20px;
+}
 
-            border-radius: 18px;
+.footer-inner {
+    max-width: 1200px;
 
-            text-align: center;
-        }
+    margin: auto;
 
-        .cta h2 {
-            margin-bottom: 12px;
+    padding: 45px 20px 25px;
 
-            font-size: 30px;
-        }
+    display: grid;
 
-        .cta p {
-            max-width: 700px;
+    grid-template-columns:
+        2fr 1fr 1fr;
 
-            margin: 0 auto 22px;
+    gap: 35px;
+}
 
-            opacity: 0.92;
-        }
+footer h3 {
+    color: white;
 
-        .cta a {
-            display: inline-block;
+    margin-bottom: 12px;
+}
 
-            background: white;
+footer p {
+    color: #cbd5e1;
 
-            color: #14532d;
+    font-size: 14px;
+}
 
-            text-decoration: none;
+footer ul {
+    list-style: none;
+}
 
-            padding: 12px 22px;
+footer li {
+    margin-bottom: 7px;
+}
 
-            border-radius: 8px;
+footer a {
+    color: #cbd5e1;
 
-            font-weight: bold;
-        }
+    text-decoration: none;
 
+    font-size: 14px;
+}
 
-        /* =========================
-           FOOTER
-        ========================= */
+footer a:hover {
+    color: white;
+}
 
-        footer {
-            background: #102a1b;
+.copyright {
+    text-align: center;
 
-            color: #dbeafe;
+    border-top:
+        1px solid
+        rgba(255,255,255,0.12);
 
-            margin-top: 20px;
-        }
+    padding: 18px 20px;
 
-        .footer-inner {
-            max-width: 1200px;
+    color: #94a3b8;
 
-            margin: auto;
+    font-size: 13px;
+}
 
-            padding: 45px 20px 25px;
+/* =========================
+   RESPONSIVE
+========================= */
 
-            display: grid;
+@media (max-width: 900px) {
 
-            grid-template-columns:
-                2fr 1fr 1fr;
+    .menu-btn {
+        display: block;
+    }
 
-            gap: 35px;
-        }
+    nav {
+        display: none;
 
-        footer h3 {
-            color: white;
+        width: 100%;
+    }
 
-            margin-bottom: 12px;
-        }
+    nav.show {
+        display: block;
+    }
 
-        footer p {
-            color: #cbd5e1;
+    .header-inner {
+        flex-wrap: wrap;
+    }
 
-            font-size: 14px;
-        }
+    nav ul {
+        flex-direction: column;
 
-        footer ul {
-            list-style: none;
-        }
+        align-items: stretch;
 
-        footer li {
-            margin-bottom: 7px;
-        }
+        padding-top: 10px;
+    }
 
-        footer a {
-            color: #cbd5e1;
+    nav a {
+        width: 100%;
+    }
 
-            text-decoration: none;
+    .cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
 
-            font-size: 14px;
-        }
+    .verification-cards {
+        grid-template-columns: 1fr;
+    }
 
-        footer a:hover {
-            color: white;
-        }
+    .footer-inner {
+        grid-template-columns:
+            1fr 1fr;
+    }
+}
 
-        .copyright {
-            text-align: center;
+@media (max-width: 600px) {
 
-            border-top:
-                1px solid
-                rgba(255,255,255,0.12);
+    .brand-text h1 {
+        font-size: 17px;
+    }
 
-            padding: 18px 20px;
+    .brand-text p {
+        font-size: 10px;
+    }
 
-            color: #94a3b8;
+    .brand img {
+        width: 50px;
+        height: 50px;
+    }
 
-            font-size: 13px;
-        }
+    .hero {
+        min-height: 430px;
+    }
 
+    .hero-logo {
+        width: 145px;
+        height: 145px;
+    }
 
-        /* =========================
-           RESPONSIVE
-        ========================= */
+    .hero h2 {
+        font-size: 31px;
+    }
 
-        @media (max-width: 900px) {
+    .hero p {
+        font-size: 15px;
+    }
 
-            .menu-btn {
-                display: block;
-            }
+    .watermark {
+        width: 330px;
+    }
 
-            nav {
-                display: none;
+    .container {
+        padding: 45px 15px;
+    }
 
-                width: 100%;
-            }
+    .section-title {
+        font-size: 26px;
+    }
 
-            nav.show {
-                display: block;
-            }
+    .cards {
+        grid-template-columns: 1fr;
+    }
 
-            .header-inner {
-                flex-wrap: wrap;
-            }
+    .welcome-box {
+        padding: 25px 18px;
+    }
 
-            nav ul {
-                flex-direction: column;
+    .welcome-photo {
+        height: 300px;
 
-                align-items: stretch;
+        border-radius: 12px;
+    }
 
-                padding-top: 10px;
-            }
+    .verification-section {
+        padding: 30px 15px;
+    }
 
-            nav a {
-                width: 100%;
-            }
+    .verification-card {
+        padding: 25px 18px;
+    }
 
-            .cards {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
+    .footer-inner {
+        grid-template-columns: 1fr;
 
-            .verification-cards {
-                grid-template-columns: 1fr;
-            }
+        gap: 25px;
+    }
+}
 
-            .footer-inner {
-                grid-template-columns:
-                    1fr 1fr;
-            }
-        }
-
-
-        @media (max-width: 600px) {
-
-            .brand-text h1 {
-                font-size: 17px;
-            }
-
-            .brand-text p {
-                font-size: 10px;
-            }
-
-            .brand img {
-                width: 50px;
-                height: 50px;
-            }
-
-            .hero {
-                min-height: 430px;
-            }
-
-            .hero-logo {
-                width: 145px;
-                height: 145px;
-            }
-
-            .hero h2 {
-                font-size: 31px;
-            }
-
-            .hero p {
-                font-size: 15px;
-            }
-
-            .watermark {
-                width: 330px;
-            }
-
-            .container {
-                padding: 45px 15px;
-            }
-
-            .section-title {
-                font-size: 26px;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-
-            .welcome-box {
-                padding: 25px 18px;
-            }
-
-            .welcome-photo {
-                height: 300px;
-
-                border-radius: 12px;
-            }
-
-            .verification-section {
-                padding: 30px 15px;
-            }
-
-            .verification-card {
-                padding: 25px 18px;
-            }
-
-            .footer-inner {
-                grid-template-columns: 1fr;
-
-                gap: 25px;
-            }
-
-        }
-
-    </style>
-
+</style>
 </head>
-
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
 
-    <!-- =========================
-         HEADER
-    ========================= -->
+<header>
 
-    <header>
+    <div class="header-inner">
 
-        <div class="header-inner">
-
-            <a href="index.html" class="brand">
-
-                <img
-                    src="profile.jpg"
-                    alt="Rohingya Education School Logo"
-                >
-
-                <div class="brand-text">
-
-                    <h1>
-                        Rohingya Education School
-                    </h1>
-
-                    <p>
-                        Education • Language • Community
-                    </p>
-
-                </div>
-
-            </a>
-
-
-            <button
-                class="menu-btn"
-                onclick="toggleMenu()"
-                aria-label="Open menu"
-            >
-                ☰
-            </button>
-
-
-            <nav id="mainNav">
-
-                <ul>
-
-                    <li>
-                        <a
-                            href="index.html"
-                            class="active"
-                        >
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="about.html">
-                            About
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="activities.html">
-                            Activities
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="updates.html">
-                            Updates
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="courses.html">
-                            Courses
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="education.html">
-                            Education
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="teachers-students.html">
-                            Teachers & Students
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="get-involved.html">
-                            Get Involved
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-        </div>
-
-    </header>
-
-
-    <!-- =========================
-         HERO
-    ========================= -->
-
-    <section class="hero">
-
-        <img
-            src="logo.png"
-            class="watermark"
-            alt=""
-        >
-
-
-        <div class="hero-content">
+        <a href="index.html" class="brand">
 
             <img
                 src="profile.jpg"
-                class="hero-logo"
                 alt="Rohingya Education School Logo"
             >
 
-            <h2>
-                Rohingya Education School
-            </h2>
+            <div class="brand-text">
+
+                <h1>
+                    Rohingya Education School
+                </h1>
+
+                <p>
+                    Education • Language • Community
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <button
+            class="menu-btn"
+            onclick="toggleMenu()"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+
+        <nav id="mainNav">
+
+            <ul>
+
+                <li>
+                    <a
+                        href="index.html"
+                        class="active"
+                    >
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="activities.html">
+                        Activities
+                    </a>
+                </li>
+
+                <li>
+                    <a href="updates.html">
+                        Updates
+                    </a>
+                </li>
+
+                <li>
+                    <a href="courses.html">
+                        Courses
+                    </a>
+                </li>
+
+                <li>
+                    <a href="education.html">
+                        Education
+                    </a>
+                </li>
+
+                <li>
+                    <a href="teachers-students.html">
+                        Teachers & Students
+                    </a>
+                </li>
+
+                <li>
+                    <a href="get-involved.html">
+                        Get Involved
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <img
+        src="logo.png"
+        class="watermark"
+        alt=""
+    >
+
+    <div class="hero-content">
+
+        <img
+            src="profile.jpg"
+            class="hero-logo"
+            alt="Rohingya Education School Logo"
+        >
+
+        <h2>
+            Rohingya Education School
+        </h2>
+
+        <p>
+            Education • Language • Community
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main class="container">
+
+
+<!-- =========================
+     WELCOME
+========================= -->
+
+<section class="section">
+
+    <div class="welcome-box">
+
+        <h3>
+            Welcome to Rohingya Education School
+        </h3>
+
+        <img
+            src="water.jpg"
+            class="welcome-photo"
+            alt="Rohingya Education School"
+        >
+
+        <p>
+            Rohingya Education School is committed to
+            supporting learning, language development,
+            education and community participation.
+            Our aim is to create a supportive learning
+            environment where students can learn,
+            develop their skills and grow together.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MISSION
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Our Mission
+    </h2>
+
+    <p class="section-intro">
+        We focus on creating meaningful learning
+        opportunities and supporting students in
+        their educational development.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>
+                Quality Learning
+            </h3>
 
             <p>
-                Education • Language • Community
+                Supporting students with useful
+                knowledge, skills and learning
+                opportunities.
             </p>
 
         </div>
 
-    </section>
+
+        <div class="card">
+
+            <h3>
+                Language Development
+            </h3>
+
+            <p>
+                Encouraging language practice,
+                literacy and communication skills.
+            </p>
+
+        </div>
 
 
-    <!-- =========================
-         MAIN CONTENT
-    ========================= -->
+        <div class="card">
 
-    <main class="container">
+            <h3>
+                Community
+            </h3>
+
+            <p>
+                Building a positive learning community
+                through cooperation and participation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-        <!-- WELCOME -->
+<!-- =========================
+     ACTIVITIES
+========================= -->
 
-        <section class="section">
+<section class="section">
 
-            <div class="welcome-box">
+    <h2 class="section-title">
+        School Activities
+    </h2>
+
+    <p class="section-intro">
+        Learning can happen through classroom study,
+        practice, creative activities and community
+        participation.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>
+                Educational Learning
+            </h3>
+
+            <p>
+                Academic learning and educational
+                practice for students.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Language Practice
+            </h3>
+
+            <p>
+                Developing reading, writing,
+                speaking and communication skills.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Creative Activities
+            </h3>
+
+            <p>
+                Encouraging creativity, teamwork
+                and active participation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LATEST UPDATES
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Latest Updates
+    </h2>
+
+    <p class="section-intro">
+        Information about school activities,
+        learning opportunities and announcements
+        will be shared here.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>
+                School Updates
+            </h3>
+
+            <p>
+                Important school information and
+                announcements.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Learning Information
+            </h3>
+
+            <p>
+                Updates about educational learning
+                and study opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>
+                Community Activities
+            </h3>
+
+            <p>
+                Information about learning and
+                community participation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     VERIFICATION CENTER
+========================= -->
+
+<section class="section">
+
+    <div class="verification-section">
+
+        <h2 class="section-title">
+            Verification Center
+        </h2>
+
+        <p class="section-intro">
+            Enter a verification code below to verify
+            a certificate, student card or teacher card.
+        </p>
+
+
+        <div class="verification-cards">
+
+
+            <!-- CERTIFICATE -->
+
+            <div class="verification-card">
+
+                <div class="verification-icon">
+                    🎓
+                </div>
 
                 <h3>
-                    Welcome to Rohingya Education School
+                    Certificate Verification
                 </h3>
 
-                <img
-                    src="water.jpg"
-                    class="welcome-photo"
-                    alt="Rohingya Education School"
+                <p>
+                    Enter the code printed on the
+                    certificate.
+                </p>
+
+                <input
+                    type="text"
+                    id="certificateCode"
+                    class="verification-input"
+                    placeholder="Enter Certificate Code"
+                    autocomplete="off"
+                    inputmode="numeric"
                 >
 
-                <p>
-
-                    Rohingya Education School is committed to
-                    supporting learning, language development,
-                    education and community participation.
-                    Our aim is to create a supportive learning
-                    environment where students can learn,
-                    develop their skills and grow together.
-
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- MISSION -->
-
-        <section class="section">
-
-            <h2 class="section-title">
-                Our Mission
-            </h2>
-
-            <p class="section-intro">
-
-                We focus on creating meaningful learning
-                opportunities and supporting students in
-                their educational development.
-
-            </p>
-
-
-            <div class="cards">
-
-                <div class="card">
-
-                    <h3>
-                        Quality Learning
-                    </h3>
-
-                    <p>
-                        Supporting students with useful
-                        knowledge, skills and learning
-                        opportunities.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        Language Development
-                    </h3>
-
-                    <p>
-                        Encouraging language practice,
-                        literacy and communication skills.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        Community
-                    </h3>
-
-                    <p>
-                        Building a positive learning community
-                        through cooperation and participation.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ACTIVITIES -->
-
-        <section class="section">
-
-            <h2 class="section-title">
-                School Activities
-            </h2>
-
-            <p class="section-intro">
-
-                Learning can happen through classroom study,
-                practice, creative activities and community
-                participation.
-
-            </p>
-
-
-            <div class="cards">
-
-                <div class="card">
-
-                    <h3>
-                        Educational Learning
-                    </h3>
-
-                    <p>
-                        Academic learning and educational
-                        practice for students.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        Language Practice
-                    </h3>
-
-                    <p>
-                        Developing reading, writing,
-                        speaking and communication skills.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        Creative Activities
-                    </h3>
-
-                    <p>
-                        Encouraging creativity, teamwork
-                        and active participation.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- LATEST UPDATES -->
-
-        <section class="section">
-
-            <h2 class="section-title">
-                Latest Updates
-            </h2>
-
-            <p class="section-intro">
-
-                Information about school activities,
-                learning opportunities and announcements
-                will be shared here.
-
-            </p>
-
-
-            <div class="cards">
-
-                <div class="card">
-
-                    <h3>
-                        School Updates
-                    </h3>
-
-                    <p>
-                        Important school information and
-                        announcements.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        Learning Information
-                    </h3>
-
-                    <p>
-                        Updates about educational learning
-                        and study opportunities.
-                    </p>
-
-                </div>
-
-
-                <div class="card">
-
-                    <h3>
-                        Community Activities
-                    </h3>
-
-                    <p>
-                        Information about learning and
-                        community participation.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             VERIFICATION CENTER
-        ========================= -->
-
-        <section class="section">
-
-            <div class="verification-section">
-
-                <h2 class="section-title">
-                    Verification Center
-                </h2>
-
-                <p class="section-intro">
-
-                    Enter a verification code below to verify
-                    a certificate, student card or teacher card.
-
-                </p>
-
-
-                <div class="verification-cards">
-
-
-                    <!-- CERTIFICATE -->
-
-                    <div class="verification-card">
-
-                        <div class="verification-icon">
-                            🎓
-                        </div>
-
-                        <h3>
-                            Certificate Verification
-                        </h3>
-
-                        <p>
-                            Enter the code printed on the
-                            certificate.
-                        </p>
-
-
-                        <input
-                            type="text"
-                            id="certificateCode"
-                            class="verification-input"
-                            placeholder="Enter Certificate Code"
-                            autocomplete="off"
-                            inputmode="numeric"
-                        >
-
-
-                        <button
-                            class="verification-btn"
-                            onclick="verifyCertificate()"
-                        >
-                            Verify Certificate
-                        </button>
-
-
-                        <div
-                            id="certificateResult"
-                            class="verification-result"
-                        ></div>
-
-                    </div>
-
-
-                    <!-- STUDENT -->
-
-                    <div class="verification-card">
-
-                        <div class="verification-icon">
-                            🧑‍🎓
-                        </div>
-
-                        <h3>
-                            Student Card Verification
-                        </h3>
-
-                        <p>
-                            Enter the code printed on the
-                            student card.
-                        </p>
-
-
-                        <input
-                            type="text"
-                            id="studentCode"
-                            class="verification-input"
-                            placeholder="Enter Student Card Code"
-                            autocomplete="off"
-                            inputmode="numeric"
-                        >
-
-
-                        <button
-                            class="verification-btn"
-                            onclick="verifyStudent()"
-                        >
-                            Verify Student Card
-                        </button>
-
-
-                        <div
-                            id="studentResult"
-                            class="verification-result"
-                        ></div>
-
-                    </div>
-
-
-                    <!-- TEACHER -->
-
-                    <div class="verification-card">
-
-                        <div class="verification-icon">
-                            👨‍🏫
-                        </div>
-
-                        <h3>
-                            Teacher Card Verification
-                        </h3>
-
-                        <p>
-                            Enter a teacher card code or
-                            search by position/name.
-                        </p>
-
-
-                        <input
-                            type="text"
-                            id="teacherCode"
-                            class="verification-input"
-                            placeholder="Code or Principal / Vice Principal"
-                            autocomplete="off"
-                        >
-
-
-                        <button
-                            class="verification-btn"
-                            onclick="verifyTeacher()"
-                        >
-                            Verify Teacher Card
-                        </button>
-
-
-                        <div
-                            id="teacherResult"
-                            class="verification-result"
-                        ></div>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- GET INVOLVED -->
-
-        <section class="section">
-
-            <div class="cta">
-
-                <h2>
-                    Get Involved
-                </h2>
-
-                <p>
-
-                    Join and support our learning community
-                    through educational participation,
-                    learning support and community involvement.
-
-                </p>
-
-                <a href="get-involved.html">
-                    Learn More
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTACT -->
-
-        <section class="section">
-
-            <h2 class="section-title">
-                Contact Us
-            </h2>
-
-            <p class="section-intro">
-
-                For general enquiries and information,
-                please visit our Contact page.
-
-            </p>
-
-
-            <div style="text-align:center;">
-
-                <a
-                    href="contact.html"
-                    style="
-                        display:inline-block;
-                        background:#14532d;
-                        color:white;
-                        text-decoration:none;
-                        padding:12px 24px;
-                        border-radius:8px;
-                        font-weight:bold;
-                    "
+                <button
+                    class="verification-btn"
+                    onclick="verifyCertificate()"
                 >
-                    Contact School
-                </a>
+                    Verify Certificate
+                </button>
+
+                <div
+                    id="certificateResult"
+                    class="verification-result"
+                ></div>
 
             </div>
 
-        </section>
 
+            <!-- STUDENT -->
 
-    </main>
+            <div class="verification-card">
 
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
-    <footer>
-
-        <div class="footer-inner">
-
-
-            <div>
+                <div class="verification-icon">
+                    🧑‍🎓
+                </div>
 
                 <h3>
-                    Rohingya Education School
+                    Student Card Verification
                 </h3>
 
                 <p>
-
-                    Education, language development and
-                    learning opportunities for the community.
-
+                    Enter the code printed on the
+                    student card.
                 </p>
 
+                <input
+                    type="text"
+                    id="studentCode"
+                    class="verification-input"
+                    placeholder="Enter Student Card Code"
+                    autocomplete="off"
+                    inputmode="numeric"
+                >
+
+                <button
+                    class="verification-btn"
+                    onclick="verifyStudent()"
+                >
+                    Verify Student Card
+                </button>
+
+                <div
+                    id="studentResult"
+                    class="verification-result"
+                ></div>
+
             </div>
 
 
-            <div>
+            <!-- TEACHER -->
+
+            <div class="verification-card">
+
+                <div class="verification-icon">
+                    👨‍🏫
+                </div>
 
                 <h3>
-                    Quick Links
+                    Teacher Card Verification
                 </h3>
 
-                <ul>
+                <p>
+                    Enter a teacher card code or
+                    search by English position/name.
+                </p>
 
-                    <li>
-                        <a href="index.html">
-                            Home
-                        </a>
-                    </li>
+                <input
+                    type="text"
+                    id="teacherCode"
+                    class="verification-input"
+                    placeholder="Code, Principal or Teacher Name"
+                    autocomplete="off"
+                >
 
-                    <li>
-                        <a href="about.html">
-                            About
-                        </a>
-                    </li>
+                <button
+                    class="verification-btn"
+                    onclick="verifyTeacher()"
+                >
+                    Verify Teacher Card
+                </button>
 
-                    <li>
-                        <a href="courses.html">
-                            Courses
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="education.html">
-                            Education
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
+                <div
+                    id="teacherResult"
+                    class="verification-result"
+                ></div>
 
             </div>
 
+        </div>
 
-            <div>
+    </div>
 
-                <h3>
-                    Important
-                </h3>
+</section>
 
-                <ul>
 
-                    <li>
-                        <a href="teachers-students.html">
-                            Teachers & Students
-                        </a>
-                    </li>
+<!-- =========================
+     GET INVOLVED
+========================= -->
 
-                    <li>
-                        <a href="get-involved.html">
-                            Get Involved
-                        </a>
-                    </li>
+<section class="section">
 
-                    <li>
-                        <a href="contact.html">
-                            Contact
-                        </a>
-                    </li>
+    <div class="cta">
 
-                </ul>
+        <h2>
+            Get Involved
+        </h2>
 
-            </div>
+        <p>
+            Join and support our learning community
+            through educational participation,
+            learning support and community involvement.
+        </p>
 
+        <a href="get-involved.html">
+            Learn More
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Contact Us
+    </h2>
+
+    <p class="section-intro">
+        For general enquiries and information,
+        please visit our Contact page.
+    </p>
+
+    <div style="text-align:center;">
+
+        <a
+            href="contact.html"
+            style="
+                display:inline-block;
+                background:#14532d;
+                color:white;
+                text-decoration:none;
+                padding:12px 24px;
+                border-radius:8px;
+                font-weight:bold;
+            "
+        >
+            Contact School
+        </a>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div>
+
+            <h3>
+                Rohingya Education School
+            </h3>
+
+            <p>
+                Education, language development and
+                learning opportunities for the community.
+            </p>
 
         </div>
 
 
-        <div class="copyright">
+        <div>
 
-            © 2026 Rohingya Education School.
-            All rights reserved.
+            <h3>
+                Quick Links
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="courses.html">
+                        Courses
+                    </a>
+                </li>
+
+                <li>
+                    <a href="education.html">
+                        Education
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
 
         </div>
 
-    </footer>
+
+        <div>
+
+            <h3>
+                Important
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="teachers-students.html">
+                        Teachers & Students
+                    </a>
+                </li>
+
+                <li>
+                    <a href="get-involved.html">
+                        Get Involved
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
 
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================= -->
+    <div class="copyright">
 
-    <script>
+        © 2026 Rohingya Education School.
+        All rights reserved.
 
+    </div>
 
-        /* =========================
-           MOBILE MENU
-        ========================= */
-
-        function toggleMenu() {
-
-            const nav =
-                document.getElementById("mainNav");
-
-            nav.classList.toggle("show");
-
-        }
+</footer>
 
 
-        document
-            .querySelectorAll("#mainNav a")
-            .forEach(function(link) {
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
-                link.addEventListener(
-                    "click",
-                    function() {
+<script>
 
-                        document
-                            .getElementById("mainNav")
-                            .classList.remove("show");
+/* =========================
+   MOBILE MENU
+========================= */
 
-                    }
-                );
+function toggleMenu() {
 
-            });
+    const nav =
+        document.getElementById("mainNav");
+
+    nav.classList.toggle("show");
+
+}
 
 
-        /* =========================
-           SHOW IMAGE
-        ========================= */
+document
+    .querySelectorAll("#mainNav a")
+    .forEach(function(link) {
 
-        function showVerificationImage(
+        link.addEventListener(
+            "click",
+            function() {
+
+                document
+                    .getElementById("mainNav")
+                    .classList.remove("show");
+
+            }
+        );
+
+    });
+
+
+/* =========================
+   SHOW VERIFIED IMAGE
+========================= */
+
+function showVerifiedImage(
+    imageFile,
+    result,
+    altText
+) {
+
+    result.style.display = "block";
+
+    result.innerHTML = `
+        <div class="verified-badge">
+            ✓ Verified
+        </div>
+
+        <img
+            src="${imageFile}"
+            alt="${altText}"
+        >
+    `;
+
+}
+
+
+/* =========================
+   CERTIFICATE VERIFICATION
+========================= */
+
+function verifyCertificate() {
+
+    const input =
+        document.getElementById(
+            "certificateCode"
+        );
+
+    const result =
+        document.getElementById(
+            "certificateResult"
+        );
+
+    const code =
+        input.value.trim();
+
+    result.style.display = "block";
+
+
+    if (
+        code === "" ||
+        !/^[0-9]+$/.test(code)
+    ) {
+
+        result.innerHTML = `
+            <div class="not-found">
+                Please enter a valid Certificate Code
+            </div>
+        `;
+
+        return;
+    }
+
+
+    const imageFile =
+        "certificates/" +
+        code +
+        ".jpg";
+
+
+    const image = new Image();
+
+
+    image.onload = function() {
+
+        showVerifiedImage(
             imageFile,
             result,
-            successMessage
-        ) {
+            "Verified Certificate"
+        );
 
-            result.style.display = "block";
+    };
 
-            const image = new Image();
 
-            image.onload = function() {
+    image.onerror = function() {
 
-                result.innerHTML = `
-                    <img
-                        src="${imageFile}"
-                        alt="${successMessage}"
-                    >
-                `;
+        result.innerHTML = `
+            <div class="not-found">
+                Certificate Not Found
+            </div>
+        `;
 
-            };
+    };
 
 
-            image.onerror = function() {
+    image.src = imageFile;
 
-                result.innerHTML = `
-                    <div class="not-found">
-                        Card Not Found
-                    </div>
-                `;
+}
 
-            };
 
+/* =========================
+   STUDENT VERIFICATION
+========================= */
 
-            image.src = imageFile;
+function verifyStudent() {
 
-        }
+    const input =
+        document.getElementById(
+            "studentCode"
+        );
 
+    const result =
+        document.getElementById(
+            "studentResult"
+        );
 
-        /* =========================
-           CERTIFICATE VERIFICATION
-        ========================= */
+    const code =
+        input.value.trim();
 
-        function verifyCertificate() {
+    result.style.display = "block";
 
-            const input =
-                document.getElementById(
-                    "certificateCode"
-                );
 
-            const result =
-                document.getElementById(
-                    "certificateResult"
-                );
+    if (
+        code === "" ||
+        !/^[0-9]+$/.test(code)
+    ) {
 
+        result.innerHTML = `
+            <div class="not-found">
+                Please enter a valid Student Card Code
+            </div>
+        `;
 
-            const code =
-                input.value.trim();
+        return;
+    }
 
 
-            result.style.display = "block";
+    const imageFile =
+        "student-cards/" +
+        code +
+        ".jpg";
 
 
-            if (
-                code === "" ||
-                !/^[0-9]+$/.test(code)
-            ) {
+    const image = new Image();
 
-                result.innerHTML = `
-                    <div class="not-found">
-                        Please enter a valid Certificate Code
-                    </div>
-                `;
 
-                return;
+    image.onload = function() {
 
-            }
+        showVerifiedImage(
+            imageFile,
+            result,
+            "Verified Student Card"
+        );
 
+    };
 
-            const imageFile =
-                "certificates/" +
-                code +
-                ".jpg";
 
+    image.onerror = function() {
 
-            const image = new Image();
+        result.innerHTML = `
+            <div class="not-found">
+                Student Card Not Found
+            </div>
+        `;
 
+    };
 
-            image.onload = function() {
 
-                result.innerHTML = `
-                    <img
-                        src="${imageFile}"
-                        alt="Verified Certificate"
-                    >
-                `;
+    image.src = imageFile;
 
-            };
+}
 
 
-            image.onerror = function() {
+/* =========================
+   NAMED TEACHER / POSITION MAP
+========================= */
 
-                result.innerHTML = `
-                    <div class="not-found">
-                        Certificate Not Found
-                    </div>
-                `;
+/*
+   IMPORTANT:
+   These paths follow the naming system
+   used by the current website.
 
-            };
+   If a particular image does not exist,
+   the website will safely show
+   "Teacher Card Not Found".
+*/
 
+const teacherMembers = {
 
-            image.src = imageFile;
+    "principal":
+        "teacher-cards/principal.jpg",
 
-        }
+    "amin nurul hoque":
+        "teacher-cards/principal.jpg",
 
+    "aminnurul hoque":
+        "teacher-cards/principal.jpg",
 
-        /* =========================
-           STUDENT VERIFICATION
-        ========================= */
 
-        function verifyStudent() {
+    "vice principal":
+        "teacher-cards/vice-principal.jpg",
 
-            const input =
-                document.getElementById(
-                    "studentCode"
-                );
+    "mohammed toha":
+        "teacher-cards/vice-principal.jpg",
 
-            const result =
-                document.getElementById(
-                    "studentResult"
-                );
 
+    "advisor":
+        "teacher-cards/advisor.jpg",
 
-            const code =
-                input.value.trim();
+    "mohammed taher":
+        "teacher-cards/advisor.jpg",
 
 
-            result.style.display = "block";
+    "head teacher":
+        "teacher-cards/head-teacher.jpg",
 
+    "assistant head teacher":
+        "teacher-cards/assistant-head-teacher.jpg",
 
-            if (
-                code === "" ||
-                !/^[0-9]+$/.test(code)
-            ) {
 
-                result.innerHTML = `
-                    <div class="not-found">
-                        Please enter a valid Student Card Code
-                    </div>
-                `;
+    "community engagement member 1":
+        "teacher-cards/community-engagement-member-1.jpg",
 
-                return;
+    "abubakkar siddiqe":
+        "teacher-cards/community-engagement-member-1.jpg",
 
-            }
 
+    "community engagement member 2":
+        "teacher-cards/community-engagement-member-2.jpg",
 
-            const imageFile =
-                "student-cards/" +
-                code +
-                ".jpg";
+    "mohammed hussain":
+        "teacher-cards/community-engagement-member-2.jpg",
 
 
-            const image = new Image();
+    "community engagement officer":
+        "teacher-cards/community-engagement-officer.jpg",
 
+    "abul hossain":
+        "teacher-cards/community-engagement-officer.jpg",
 
-            image.onload = function() {
 
-                result.innerHTML = `
-                    <img
-                        src="${imageFile}"
-                        alt="Verified Student Card"
-                    >
-                `;
+    "education officer & media officer":
+        "teacher-cards/education-officer-media-officer.jpg",
 
-            };
+    "education officer and media officer":
+        "teacher-cards/education-officer-media-officer.jpg",
 
+    "mohammed ayoup":
+        "teacher-cards/education-officer-media-officer.jpg",
 
-            image.onerror = function() {
 
-                result.innerHTML = `
-                    <div class="not-found">
-                        Student Card Not Found
-                    </div>
-                `;
+    "education director":
+        "teacher-cards/education-director.jpg",
 
-            };
+    "hedayot ullha":
+        "teacher-cards/education-director.jpg",
 
 
-            image.src = imageFile;
+    "woman engagement supporter":
+        "teacher-cards/woman-engagement-supporter.jpg",
 
-        }
+    "julekha":
+        "teacher-cards/woman-engagement-supporter.jpg",
 
 
-        /* =========================
-           TEACHER ROLE MAP
-        ========================= */
+    "accountant officer":
+        "teacher-cards/accountant-officer.jpg",
 
-        const teacherMembers = {
+    "mohammed shorif":
+        "teacher-cards/accountant-officer.jpg"
 
-            "principal":
-                "teacher-cards/principal.jpg",
+};
 
-            "vice principal":
-                "teacher-cards/vice-principal.jpg",
 
-            "head teacher":
-                "teacher-cards/head-teacher.jpg",
+/* =========================
+   TEACHER VERIFICATION
+========================= */
 
-            "assistant head teacher":
-                "teacher-cards/assistant-head-teacher.jpg"
+function verifyTeacher() {
+
+    const input =
+        document.getElementById(
+            "teacherCode"
+        );
+
+    const result =
+        document.getElementById(
+            "teacherResult"
+        );
+
+    const search =
+        input.value
+            .trim()
+            .toLowerCase();
+
+    result.style.display = "block";
+
+
+    if (search === "") {
+
+        result.innerHTML = `
+            <div class="not-found">
+                Please enter a Teacher Card Code
+                or English position/name.
+            </div>
+        `;
+
+        return;
+    }
+
+
+    /* =========================
+       POSITION / NAME SEARCH
+    ========================= */
+
+    if (
+        Object.prototype.hasOwnProperty.call(
+            teacherMembers,
+            search
+        )
+    ) {
+
+        const imageFile =
+            teacherMembers[search];
+
+        const image =
+            new Image();
+
+
+        image.onload = function() {
+
+            showVerifiedImage(
+                imageFile,
+                result,
+                "Verified Teacher Card"
+            );
 
         };
 
 
-        /* =========================
-           TEACHER VERIFICATION
-        ========================= */
+        image.onerror = function() {
 
-        function verifyTeacher() {
+            result.innerHTML = `
+                <div class="not-found">
+                    Teacher Card Not Found
+                </div>
+            `;
 
-            const input =
-                document.getElementById(
-                    "teacherCode"
-                );
-
-            const result =
-                document.getElementById(
-                    "teacherResult"
-                );
+        };
 
 
-            const code =
-                input.value
-                    .trim()
-                    .toLowerCase();
+        image.src = imageFile;
+
+        return;
+    }
 
 
-            result.style.display = "block";
+    /* =========================
+       NUMERIC TEACHER CODE
+       NO 1–1000 LIMIT
+    ========================= */
+
+    if (!/^[0-9]+$/.test(search)) {
+
+        result.innerHTML = `
+            <div class="not-found">
+                Teacher Card Not Found
+            </div>
+        `;
+
+        return;
+    }
 
 
-            if (code === "") {
-
-                result.innerHTML = `
-                    <div class="not-found">
-                        Please enter a Teacher Card Code
-                        or position/name.
-                    </div>
-                `;
-
-                return;
-
-            }
+    const imageFile =
+        "teacher-cards/" +
+        search +
+        ".jpg";
 
 
-            /* =========================
-               TEACHER POSITION SEARCH
-            ========================= */
-
-            if (
-                teacherMembers
-                    .hasOwnProperty(code)
-            ) {
-
-                const imageFile =
-                    teacherMembers[code];
+    const image =
+        new Image();
 
 
-                const image = new Image();
+    image.onload = function() {
+
+        showVerifiedImage(
+            imageFile,
+            result,
+            "Verified Teacher Card"
+        );
+
+    };
 
 
-                image.onload = function() {
+    image.onerror = function() {
 
-                    result.innerHTML = `
-                        <img
-                            src="${imageFile}"
-                            alt="Verified Teacher Card"
-                        >
-                    `;
+        result.innerHTML = `
+            <div class="not-found">
+                Teacher Card Not Found
+            </div>
+        `;
 
-                };
-
-
-                image.onerror = function() {
-
-                    result.innerHTML = `
-                        <div class="not-found">
-                            Teacher Card Not Found
-                        </div>
-                    `;
-
-                };
+    };
 
 
-                image.src = imageFile;
+    image.src = imageFile;
 
-                return;
-
-            }
+}
 
 
-            /* =========================
-               TEACHER NUMERIC CODE
-            ========================= */
+/* =========================
+   ENTER KEY SUPPORT
+========================= */
 
-            if (
-                !/^[0-9]+$/.test(code)
-            ) {
+document
+    .getElementById("certificateCode")
+    .addEventListener(
+        "keydown",
+        function(event) {
 
-                result.innerHTML = `
-                    <div class="not-found">
-                        Teacher Card Not Found
-                    </div>
-                `;
+            if (event.key === "Enter") {
 
-                return;
+                event.preventDefault();
+
+                verifyCertificate();
 
             }
-
-
-            const imageFile =
-                "teacher-cards/" +
-                code +
-                ".jpg";
-
-
-            const image = new Image();
-
-
-            image.onload = function() {
-
-                result.innerHTML = `
-                    <img
-                        src="${imageFile}"
-                        alt="Verified Teacher Card"
-                    >
-                `;
-
-            };
-
-
-            image.onerror = function() {
-
-                result.innerHTML = `
-                    <div class="not-found">
-                        Teacher Card Not Found
-                    </div>
-                `;
-
-            };
-
-
-            image.src = imageFile;
 
         }
+    );
 
 
-        /* =========================
-           ENTER KEY SUPPORT
-        ========================= */
+document
+    .getElementById("studentCode")
+    .addEventListener(
+        "keydown",
+        function(event) {
 
-        document
-            .getElementById("certificateCode")
-            .addEventListener(
-                "keydown",
-                function(event) {
+            if (event.key === "Enter") {
 
-                    if (event.key === "Enter") {
+                event.preventDefault();
 
-                        verifyCertificate();
+                verifyStudent();
 
-                    }
+            }
 
-                }
-            );
+        }
+    );
 
 
-        document
-            .getElementById("studentCode")
-            .addEventListener(
-                "keydown",
-                function(event) {
+document
+    .getElementById("teacherCode")
+    .addEventListener(
+        "keydown",
+        function(event) {
 
-                    if (event.key === "Enter") {
+            if (event.key === "Enter") {
 
-                        verifyStudent();
+                event.preventDefault();
 
-                    }
+                verifyTeacher();
 
-                }
-            );
+            }
 
+        }
+    );
 
-        document
-            .getElementById("teacherCode")
-            .addEventListener(
-                "keydown",
-                function(event) {
-
-                    if (event.key === "Enter") {
-
-                        verifyTeacher();
-
-                    }
-
-                }
-            );
-
-
-    </script>
-
+</script>
 
 </body>
-
 </html>
