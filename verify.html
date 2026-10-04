@@ -4,7 +4,11 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Verify Certificate - Rohingya Education School</title>
 
@@ -32,7 +36,10 @@
             color: inherit;
         }
 
-        /* HEADER */
+
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
             background: #ffffff;
@@ -46,6 +53,7 @@
             max-width: 1200px;
             margin: auto;
             padding: 12px 20px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -74,7 +82,10 @@
             color: #667085;
         }
 
-        /* NAVIGATION */
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav ul {
             list-style: none;
@@ -87,8 +98,10 @@
             display: block;
             padding: 9px 10px;
             border-radius: 7px;
+
             font-size: 14px;
             color: #344054;
+
             transition: 0.2s;
         }
 
@@ -100,24 +113,35 @@
 
         .menu-btn {
             display: none;
+
             border: none;
             background: #14532d;
             color: white;
+
             font-size: 24px;
+
             padding: 6px 11px;
             border-radius: 7px;
+
             cursor: pointer;
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             position: relative;
-            min-height: 480px;
+
+            min-height: 420px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             text-align: center;
+
             overflow: hidden;
 
             background:
@@ -131,73 +155,90 @@
 
         .watermark {
             position: absolute;
+
             width: 500px;
             max-width: 75%;
+
             opacity: 0.10;
+
             object-fit: contain;
+
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+
+            transform:
+                translate(-50%, -50%);
+
             pointer-events: none;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
+
             max-width: 850px;
+
             padding: 55px 20px;
         }
 
         .hero-logo {
-            width: 180px;
-            height: 180px;
+            width: 160px;
+            height: 160px;
+
             object-fit: contain;
+
             border-radius: 50%;
-            margin-bottom: 25px;
-            filter: drop-shadow(
-                0 8px 18px rgba(0,0,0,0.25)
-            );
+
+            margin-bottom: 22px;
+
+            filter:
+                drop-shadow(
+                    0 8px 18px
+                    rgba(0,0,0,0.25)
+                );
         }
 
         .hero h2 {
-            font-size: 42px;
-            margin-bottom: 12px;
+            font-size: 40px;
+            margin-bottom: 10px;
         }
 
         .hero p {
-            font-size: 18px;
-            max-width: 700px;
-            margin: auto;
+            font-size: 17px;
             color: #eef7f0;
         }
 
-        /* MAIN */
+
+        /* =========================
+           MAIN
+        ========================= */
 
         main {
-            max-width: 1100px;
+            max-width: 1000px;
+
             margin: auto;
+
             padding: 55px 20px;
         }
 
         .section {
             background: white;
+
             border-radius: 16px;
+
             padding: 35px;
+
             margin-bottom: 28px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+
+            box-shadow:
+                0 5px 20px
+                rgba(0,0,0,0.06);
         }
 
-        .section h2 {
-            color: #14532d;
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
 
-        .section p {
-            color: #475467;
-        }
-
-        /* VERIFY BOX */
+        /* =========================
+           VERIFY BOX
+        ========================= */
 
         .verify-box {
             max-width: 800px;
@@ -205,45 +246,68 @@
         }
 
         .verify-box h2 {
+            color: #14532d;
+
             text-align: center;
-            margin-bottom: 10px;
+
+            font-size: 28px;
+
+            margin-bottom: 8px;
         }
 
         .verify-intro {
             text-align: center;
-            max-width: 700px;
-            margin: 0 auto 25px;
+
+            color: #667085;
+
+            margin-bottom: 25px;
         }
 
         .input-group {
             display: flex;
+
             gap: 10px;
+
             margin-top: 20px;
         }
 
         #certificateCode {
             flex: 1;
+
             padding: 14px 16px;
+
             border: 1px solid #cbd5e1;
+
             border-radius: 9px;
+
             font-size: 16px;
+
             outline: none;
         }
 
         #certificateCode:focus {
             border-color: #14532d;
+
             box-shadow:
-                0 0 0 3px rgba(20,83,45,0.10);
+                0 0 0 3px
+                rgba(20,83,45,0.10);
         }
 
         .verify-btn {
-            padding: 14px 24px;
+            padding: 14px 25px;
+
             background: #14532d;
+
             color: white;
+
             border: none;
+
             border-radius: 9px;
+
             font-size: 16px;
+
             cursor: pointer;
+
             white-space: nowrap;
         }
 
@@ -251,128 +315,149 @@
             background: #166534;
         }
 
+
+        /* =========================
+           ERROR
+        ========================= */
+
         .error {
             display: none;
+
             margin-top: 18px;
+
             padding: 13px;
+
             border-radius: 8px;
+
             background: #fef2f2;
+
             color: #b91c1c;
+
             text-align: center;
+
             font-weight: bold;
         }
 
-        /* RESULT */
+
+        /* =========================
+           CERTIFICATE RESULT
+        ========================= */
 
         #result {
             display: none;
-            margin-top: 30px;
+
+            margin-top: 35px;
+
             padding-top: 30px;
-            border-top: 1px solid #e5e7eb;
+
+            border-top:
+                1px solid #e5e7eb;
         }
 
-        .verified {
+        .certificate-title {
             text-align: center;
+
             color: #15803d;
-            font-size: 25px;
+
+            font-size: 24px;
+
             font-weight: bold;
-            margin-bottom: 22px;
+
+            margin-bottom: 20px;
         }
 
-        .profile {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .profile img {
-            width: 140px;
-            height: 170px;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 3px solid #14532d;
-            background: #f8fafc;
-        }
-
-        /* CERTIFICATE DETAILS */
-
-        .details {
-            margin-top: 10px;
-        }
-
-        .details p {
-            display: block;
+        .certificate-image-container {
             width: 100%;
-            padding: 14px 0;
-            border-bottom: 1px solid #edf0ef;
-            margin: 0;
+
+            text-align: center;
+
+            overflow: hidden;
         }
 
-        .details p:last-child {
-            border-bottom: none;
+        .certificate-image {
+            display: block;
+
+            width: 100%;
+
+            max-width: 100%;
+
+            height: auto;
+
+            margin: auto;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 5px 25px
+                rgba(0,0,0,0.15);
         }
 
-        .rtl-row {
-            direction: rtl;
-            text-align: right;
-        }
 
-        .rtl-label {
-            display: inline;
-            font-weight: bold;
-            color: #14532d;
-            margin-left: 8px;
-        }
-
-        .rtl-value {
-            display: inline;
-            color: #334155;
-            word-break: break-word;
-        }
-
-        /* INFORMATION */
+        /* =========================
+           INFORMATION
+        ========================= */
 
         .info-section {
             background: #e8f5e9;
-            padding: 30px;
+
+            padding: 28px;
+
             border-radius: 16px;
+
             text-align: center;
         }
 
         .info-section h3 {
             color: #14532d;
-            margin-bottom: 10px;
+
+            margin-bottom: 8px;
         }
 
         .info-section p {
             color: #475569;
+
             max-width: 700px;
+
             margin: auto;
         }
 
-        /* FOOTER */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #102a1b;
+
             color: #d9e8dd;
+
             margin-top: 20px;
         }
 
         .footer-container {
             max-width: 1200px;
+
             margin: auto;
+
             padding: 45px 20px 25px;
+
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
+
+            grid-template-columns:
+                2fr 1fr 1fr;
+
             gap: 35px;
         }
 
         footer h3 {
             color: white;
+
             margin-bottom: 12px;
         }
 
         footer p {
             color: #bfd0c4;
+
             font-size: 14px;
         }
 
@@ -386,6 +471,7 @@
 
         footer a {
             color: #bfd0c4;
+
             font-size: 14px;
         }
 
@@ -395,13 +481,22 @@
 
         .copyright {
             text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.12);
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.12);
+
             padding: 18px 20px;
+
             font-size: 13px;
+
             color: #aebfb4;
         }
 
-        /* MOBILE */
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 900px) {
 
@@ -411,12 +506,19 @@
 
             nav {
                 display: none;
+
                 position: absolute;
+
                 top: 82px;
+
                 left: 0;
                 right: 0;
+
                 background: white;
-                box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+
+                box-shadow:
+                    0 8px 15px
+                    rgba(0,0,0,0.08);
             }
 
             nav.show {
@@ -425,6 +527,7 @@
 
             nav ul {
                 display: block;
+
                 padding: 10px 15px;
             }
 
@@ -437,7 +540,7 @@
             }
 
             .hero {
-                min-height: 400px;
+                min-height: 380px;
             }
 
             .hero h2 {
@@ -450,9 +553,11 @@
 
             .footer-container {
                 grid-template-columns: 1fr;
+
                 gap: 25px;
             }
         }
+
 
         @media (max-width: 600px) {
 
@@ -478,8 +583,8 @@
             }
 
             .hero-logo {
-                width: 145px;
-                height: 145px;
+                width: 140px;
+                height: 140px;
             }
 
             .watermark {
@@ -491,11 +596,7 @@
             }
 
             .section {
-                padding: 25px 20px;
-            }
-
-            .section h2 {
-                font-size: 24px;
+                padding: 25px 18px;
             }
 
             .input-group {
@@ -506,10 +607,10 @@
                 width: 100%;
             }
 
-            .rtl-label,
-            .rtl-value {
-                display: inline;
+            .certificate-title {
+                font-size: 21px;
             }
+
         }
 
     </style>
@@ -520,13 +621,18 @@
 <body>
 
 
-    <!-- HEADER -->
+    <!-- =========================
+         HEADER
+    ========================= -->
 
     <header>
 
         <div class="header-container">
 
-            <a href="index.html" class="brand">
+            <a
+                href="index.html"
+                class="brand"
+            >
 
                 <img
                     src="profile.jpg"
@@ -633,7 +739,9 @@
     </header>
 
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <section class="hero">
 
@@ -642,7 +750,6 @@
             alt=""
             class="watermark"
         >
-
 
         <div class="hero-content">
 
@@ -657,7 +764,7 @@
             </h2>
 
             <p>
-                Verify an issued certificate using its certificate code.
+                Verify a certificate using its certificate code.
             </p>
 
         </div>
@@ -665,7 +772,9 @@
     </section>
 
 
-    <!-- MAIN -->
+    <!-- =========================
+         MAIN
+    ========================= -->
 
     <main>
 
@@ -677,8 +786,7 @@
             </h2>
 
             <p class="verify-intro">
-                Enter the certificate code below to view the
-                available certificate information.
+                Enter the certificate code to view the certificate.
             </p>
 
 
@@ -709,140 +817,24 @@
             </div>
 
 
-            <!-- RESULT -->
+            <!-- =========================
+                 CERTIFICATE RESULT
+            ========================= -->
 
             <div id="result">
 
-                <div class="verified">
-                    𐴏𐴡𐴀𐴞
+                <div class="certificate-title">
+                    Certificate Verified
                 </div>
 
-
-                <div class="profile">
+                <div class="certificate-image-container">
 
                     <img
-                        id="studentPhoto"
+                        id="certificateImage"
+                        class="certificate-image"
                         src=""
-                        alt="Student Photo"
+                        alt="Verified Certificate"
                     >
-
-                </div>
-
-
-                <div class="details">
-
-
-                    <!-- Certificate Number -->
-
-                    <p class="rtl-row">
-
-                        <span class="rtl-label">
-                            𐴏𐴡𐴤𐴕𐴡𐴃𐴢 𐴑𐴟𐴀𐴋:
-                        </span>
-
-                        <span
-                            class="rtl-value"
-                            id="code"
-                        ></span>
-
-                    </p>
-
-
-                    <!-- Name -->
-
-                    <p class="rtl-row">
-
-                        <span class="rtl-label">
-                            𐴕𐴝𐴔:
-                        </span>
-
-                        <span
-                            class="rtl-value"
-                            id="name"
-                        ></span>
-
-                    </p>
-
-
-                    <!-- Father Name -->
-
-                    <p class="rtl-row">
-
-                        <span class="rtl-label">
-                            𐴁𐴝𐴉𐴡𐴌 𐴕𐴝𐴔:
-                        </span>
-
-                        <span
-                            class="rtl-value"
-                            id="father"
-                        ></span>
-
-                    </p>
-
-
-                    <!-- Date of Birth -->
-
-                    <p class="rtl-row">
-
-                        <span class="rtl-label">
-                            𐴎𐴡𐴌𐴔𐴡:
-                        </span>
-
-                        <span
-                            class="rtl-value"
-                            id="dateOfBirth"
-                        ></span>
-
-                    </p>
-
-
-                    <!-- Present Address -->
-
-                    <p class="rtl-row">
-
-                        <span class="rtl-label">
-                            𐴀𐴠𐴈𐴡𐴕𐴡𐴥𐴌 𐴄𐴞𐴑𐴝𐴕𐴝𐴤:
-                        </span>
-
-                        <span
-                            class="rtl-value"
-                            id="presentAddress"
-                        ></span>
-
-                    </p>
-
-
-                    <!-- Permanent Address -->
-
-                    <p class="rtl-row">
-
-                        <span class="rtl-label">
-                            𐴇𐴠𐴏𐴃𐴝𐴘𐴀𐴞 𐴄𐴞𐴑𐴝𐴕𐴝𐴤:
-                        </span>
-
-                        <span
-                            class="rtl-value"
-                            id="permanentAddress"
-                        ></span>
-
-                    </p>
-
-
-                    <!-- Issue Date -->
-
-                    <p class="rtl-row">
-
-                        <span class="rtl-label">
-                            𐴉𐴝𐴘𐴧𐴠𐴊𐴠 𐴃𐴝𐴌𐴞𐴑:
-                        </span>
-
-                        <span
-                            class="rtl-value"
-                            id="issueDate"
-                        ></span>
-
-                    </p>
-
 
                 </div>
 
@@ -851,22 +843,17 @@
         </section>
 
 
-        <!-- INFORMATION -->
-
         <section class="section">
 
             <div class="info-section">
 
                 <h3>
-                    About Certificate Verification
+                    Certificate Verification
                 </h3>
 
                 <p>
-                    This page allows certificate information
-                    to be checked using a certificate code.
-                    The information displayed depends on the
-                    certificate records available in the
-                    school's verification system.
+                    Enter a valid certificate code above
+                    to view the corresponding certificate.
                 </p>
 
             </div>
@@ -877,7 +864,9 @@
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
@@ -895,9 +884,11 @@
                 </p>
 
                 <p style="margin-top:10px;">
+
                     Supporting learning and educational
                     development through a welcoming
                     school community.
+
                 </p>
 
             </div>
@@ -996,15 +987,11 @@
     </footer>
 
 
-    <!-- CERTIFICATE DATA -->
-
-    <script src="certificates.js"></script>
-
-
-    <!-- JAVASCRIPT -->
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
 
     <script>
-
 
         /* Mobile Menu */
 
@@ -1037,35 +1024,9 @@
             });
 
 
-        /* English Numbers
-           → Rohingya Script Numbers */
-
-        function toRohingyaNumbers(number) {
-
-            const rohNumbers = {
-
-                "0": "𐴰",
-                "1": "𐴱",
-                "2": "𐴲",
-                "3": "𐴳",
-                "4": "𐴴",
-                "5": "𐴵",
-                "6": "𐴶",
-                "7": "𐴷",
-                "8": "𐴸",
-                "9": "𐴹"
-
-            };
-
-            return String(number).replace(
-                /[0-9]/g,
-                digit => rohNumbers[digit]
-            );
-
-        }
-
-
-        /* CERTIFICATE VERIFICATION */
+        /* =========================
+           CERTIFICATE VERIFICATION
+        ========================= */
 
         function verifyCertificate() {
 
@@ -1077,84 +1038,65 @@
 
 
             const result =
-                document.getElementById("result");
+                document
+                    .getElementById("result");
 
 
             const error =
-                document.getElementById("error");
+                document
+                    .getElementById("error");
 
+
+            const certificateImage =
+                document
+                    .getElementById("certificateImage");
+
+
+            /* Hide previous result */
 
             result.style.display = "none";
+
             error.style.display = "none";
 
 
-            if (certificates[code]) {
+            /*
+                Certificate Code
+                → Certificate Image
+            */
 
-                const student =
+            const certificates = {
+
+                "020250424":
+                    "020250424.jpg"
+
+            };
+
+
+            /*
+                Check certificate
+            */
+
+            if (
+                certificates[code]
+            ) {
+
+                certificateImage.src =
                     certificates[code];
 
-
-                document
-                    .getElementById("code")
-                    .textContent =
-                    toRohingyaNumbers(code);
-
-
-                document
-                    .getElementById("name")
-                    .textContent =
-                    student.name || "";
-
-
-                document
-                    .getElementById("father")
-                    .textContent =
-                    student.father || "";
-
-
-                document
-                    .getElementById("dateOfBirth")
-                    .textContent =
-                    student.dateOfBirth || "";
-
-
-                document
-                    .getElementById("presentAddress")
-                    .textContent =
-                    student.presentAddress || "";
-
-
-                document
-                    .getElementById("permanentAddress")
-                    .textContent =
-                    student.permanentAddress || "";
-
-
-                document
-                    .getElementById("issueDate")
-                    .textContent =
-                    student.issueDate || "";
-
-
-                document
-                    .getElementById("studentPhoto")
-                    .src =
-                    student.photo || "";
-
-
-                result.style.display = "block";
-
+                result.style.display =
+                    "block";
 
             } else {
 
-                error.style.display = "block";
+                error.style.display =
+                    "block";
 
             }
 
         }
 
 
-        /* Enter key also verifies */
+        /* Enter Key */
 
         document
             .getElementById("certificateCode")
@@ -1162,7 +1104,9 @@
                 "keydown",
                 function(event) {
 
-                    if (event.key === "Enter") {
+                    if (
+                        event.key === "Enter"
+                    ) {
 
                         verifyCertificate();
 
@@ -1170,36 +1114,6 @@
 
                 }
             );
-
-
-        /* QR CODE AUTO VERIFICATION */
-
-        window.addEventListener(
-            "DOMContentLoaded",
-            function() {
-
-                const urlParams =
-                    new URLSearchParams(
-                        window.location.search
-                    );
-
-
-                const qrCode =
-                    urlParams.get("code");
-
-
-                if (qrCode) {
-
-                    document
-                        .getElementById("certificateCode")
-                        .value = qrCode;
-
-                    verifyCertificate();
-
-                }
-
-            }
-        );
 
     </script>
 
