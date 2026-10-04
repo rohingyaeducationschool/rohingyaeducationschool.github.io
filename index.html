@@ -2,10 +2,14 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Rohingya Education School</title>
+
 
     <style>
 
@@ -26,6 +30,7 @@
             line-height: 1.6;
         }
 
+
         /* =========================
            HEADER
         ========================= */
@@ -42,9 +47,11 @@
             max-width: 1200px;
             margin: auto;
             padding: 14px 20px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             gap: 20px;
         }
 
@@ -52,6 +59,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
+
             text-decoration: none;
             color: #14532d;
         }
@@ -59,20 +67,20 @@
         .brand img {
             width: 58px;
             height: 58px;
+
             border-radius: 50%;
             object-fit: contain;
         }
 
         .brand-text h1 {
             font-size: 21px;
-            margin: 0;
         }
 
         .brand-text p {
             font-size: 12px;
             color: #64748b;
-            margin-top: 2px;
         }
+
 
         /* =========================
            NAVIGATION
@@ -80,8 +88,10 @@
 
         nav ul {
             list-style: none;
+
             display: flex;
             align-items: center;
+
             gap: 4px;
             flex-wrap: wrap;
         }
@@ -89,9 +99,13 @@
         nav a {
             text-decoration: none;
             color: #334155;
+
             padding: 9px 10px;
+
             border-radius: 7px;
+
             font-size: 14px;
+
             display: block;
         }
 
@@ -103,14 +117,21 @@
 
         .menu-btn {
             display: none;
+
             background: #14532d;
             color: white;
+
             border: none;
+
             padding: 9px 12px;
+
             border-radius: 7px;
+
             font-size: 22px;
+
             cursor: pointer;
         }
+
 
         /* =========================
            HERO
@@ -118,11 +139,15 @@
 
         .hero {
             position: relative;
+
             min-height: 480px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             text-align: center;
+
             overflow: hidden;
 
             background:
@@ -136,26 +161,38 @@
 
         .watermark {
             position: absolute;
+
             width: 500px;
             max-width: 75%;
+
             opacity: 0.10;
-            pointer-events: none;
+
             object-fit: contain;
+
+            pointer-events: none;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
+
             padding: 55px 20px;
         }
 
         .hero-logo {
             width: 180px;
             height: 180px;
+
             object-fit: contain;
+
             border-radius: 50%;
+
             margin-bottom: 25px;
-            filter: drop-shadow(0 8px 18px rgba(0,0,0,0.25));
+
+            filter:
+                drop-shadow(
+                    0 8px 18px rgba(0,0,0,0.25)
+                );
         }
 
         .hero h2 {
@@ -165,16 +202,18 @@
 
         .hero p {
             font-size: 18px;
-            opacity: 0.95;
         }
 
+
         /* =========================
-           SECTIONS
+           MAIN
         ========================= */
 
         .container {
             max-width: 1100px;
+
             margin: auto;
+
             padding: 60px 20px;
         }
 
@@ -184,17 +223,24 @@
 
         .section-title {
             text-align: center;
+
             color: #14532d;
+
             font-size: 30px;
+
             margin-bottom: 12px;
         }
 
         .section-intro {
             max-width: 760px;
+
             margin: 0 auto 30px;
+
             text-align: center;
+
             color: #64748b;
         }
+
 
         /* =========================
            CARDS
@@ -202,29 +248,42 @@
 
         .cards {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 22px;
         }
 
         .card {
             background: #ffffff;
+
             padding: 28px 22px;
+
             border-radius: 15px;
-            box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+
+            box-shadow:
+                0 4px 18px rgba(0,0,0,0.07);
+
             border: 1px solid #e5e7eb;
+
             text-align: center;
         }
 
         .card h3 {
             color: #14532d;
+
             margin-bottom: 10px;
+
             font-size: 20px;
         }
 
         .card p {
             color: #64748b;
+
             font-size: 15px;
         }
+
 
         /* =========================
            WELCOME
@@ -232,38 +291,52 @@
 
         .welcome-box {
             background: #ffffff;
+
             padding: 35px;
+
             border-radius: 18px;
-            box-shadow: 0 5px 22px rgba(0,0,0,0.08);
+
+            box-shadow:
+                0 5px 22px rgba(0,0,0,0.08);
+
             text-align: center;
         }
 
         .welcome-box h3 {
             color: #14532d;
+
             font-size: 25px;
+
             margin-bottom: 20px;
         }
 
         .welcome-box p {
             max-width: 800px;
+
             margin: auto;
+
             color: #475569;
         }
 
-        /* =========================
-           HOME PAGE PHOTO
-        ========================= */
-
         .welcome-photo {
             width: 100%;
+
             max-width: 900px;
+
             height: 430px;
+
             object-fit: cover;
+
             display: block;
+
             margin: 0 auto 25px;
+
             border-radius: 16px;
-            box-shadow: 0 6px 22px rgba(0,0,0,0.14);
+
+            box-shadow:
+                0 6px 22px rgba(0,0,0,0.14);
         }
+
 
         /* =========================
            VERIFICATION CENTER
@@ -271,72 +344,176 @@
 
         .verification-section {
             background: #ffffff;
+
             padding: 40px 25px;
+
             border-radius: 18px;
-            box-shadow: 0 5px 22px rgba(0,0,0,0.08);
+
+            box-shadow:
+                0 5px 22px rgba(0,0,0,0.08);
         }
 
         .verification-cards {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 22px;
+
             margin-top: 30px;
         }
 
         .verification-card {
             background: #f8faf9;
+
             border: 1px solid #dce9df;
+
             border-radius: 15px;
+
             padding: 30px 20px;
+
             text-align: center;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
         .verification-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+
+            box-shadow:
+                0 8px 22px rgba(0,0,0,0.10);
         }
 
         .verification-icon {
             width: 65px;
             height: 65px;
+
             margin: 0 auto 18px;
+
             border-radius: 50%;
+
             background: #e8f5e9;
+
             color: #14532d;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             font-size: 30px;
         }
 
         .verification-card h3 {
             color: #14532d;
+
             font-size: 20px;
+
             margin-bottom: 10px;
         }
 
         .verification-card p {
             color: #64748b;
+
             font-size: 14px;
-            margin-bottom: 20px;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================
+           VERIFICATION INPUT
+        ========================= */
+
+        .verification-input {
+            width: 100%;
+
+            padding: 12px 13px;
+
+            border: 1px solid #cbd5e1;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+
+            text-align: center;
+
+            outline: none;
+
+            margin-bottom: 10px;
+
+            background: white;
+        }
+
+        .verification-input:focus {
+            border-color: #14532d;
+
+            box-shadow:
+                0 0 0 3px rgba(20,83,45,0.10);
         }
 
         .verification-btn {
-            display: inline-block;
+            width: 100%;
+
             background: #14532d;
+
             color: white;
+
+            border: none;
+
             text-decoration: none;
+
             padding: 11px 20px;
+
             border-radius: 8px;
+
             font-weight: bold;
+
             font-size: 14px;
-            transition: background 0.2s ease;
+
+            cursor: pointer;
         }
 
         .verification-btn:hover {
             background: #0f3f22;
         }
+
+        .verification-result {
+            margin-top: 18px;
+
+            display: none;
+        }
+
+        .verification-result img {
+            width: 100%;
+
+            max-height: 420px;
+
+            object-fit: contain;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.12);
+        }
+
+        .not-found {
+            color: #b91c1c;
+
+            background: #fef2f2;
+
+            border: 1px solid #fecaca;
+
+            padding: 10px;
+
+            border-radius: 8px;
+
+            font-size: 14px;
+        }
+
 
         /* =========================
            CTA
@@ -344,36 +521,46 @@
 
         .cta {
             background: #14532d;
+
             color: white;
+
             padding: 45px 25px;
+
             border-radius: 18px;
+
             text-align: center;
         }
 
         .cta h2 {
             margin-bottom: 12px;
+
             font-size: 30px;
         }
 
         .cta p {
             max-width: 700px;
+
             margin: 0 auto 22px;
+
             opacity: 0.92;
         }
 
         .cta a {
             display: inline-block;
+
             background: white;
+
             color: #14532d;
+
             text-decoration: none;
+
             padding: 12px 22px;
+
             border-radius: 8px;
+
             font-weight: bold;
         }
 
-        .cta a:hover {
-            background: #e8f5e9;
-        }
 
         /* =========================
            FOOTER
@@ -381,26 +568,36 @@
 
         footer {
             background: #102a1b;
+
             color: #dbeafe;
+
             margin-top: 20px;
         }
 
         .footer-inner {
             max-width: 1200px;
+
             margin: auto;
+
             padding: 45px 20px 25px;
+
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
+
+            grid-template-columns:
+                2fr 1fr 1fr;
+
             gap: 35px;
         }
 
         footer h3 {
             color: white;
+
             margin-bottom: 12px;
         }
 
         footer p {
             color: #cbd5e1;
+
             font-size: 14px;
         }
 
@@ -414,7 +611,9 @@
 
         footer a {
             color: #cbd5e1;
+
             text-decoration: none;
+
             font-size: 14px;
         }
 
@@ -424,11 +623,17 @@
 
         .copyright {
             text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.12);
+
+            border-top:
+                1px solid rgba(255,255,255,0.12);
+
             padding: 18px 20px;
+
             color: #94a3b8;
+
             font-size: 13px;
         }
+
 
         /* =========================
            RESPONSIVE
@@ -442,6 +647,7 @@
 
             nav {
                 display: none;
+
                 width: 100%;
             }
 
@@ -455,7 +661,9 @@
 
             nav ul {
                 flex-direction: column;
+
                 align-items: stretch;
+
                 padding-top: 10px;
             }
 
@@ -464,7 +672,8 @@
             }
 
             .cards {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
             .verification-cards {
@@ -472,9 +681,11 @@
             }
 
             .footer-inner {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns:
+                    1fr 1fr;
             }
         }
+
 
         @media (max-width: 600px) {
 
@@ -543,8 +754,10 @@
 
             .footer-inner {
                 grid-template-columns: 1fr;
+
                 gap: 25px;
             }
+
         }
 
     </style>
@@ -553,6 +766,7 @@
 
 
 <body>
+
 
     <!-- =========================
          HEADER
@@ -571,7 +785,9 @@
 
                 <div class="brand-text">
 
-                    <h1>Rohingya Education School</h1>
+                    <h1>
+                        Rohingya Education School
+                    </h1>
 
                     <p>
                         Education • Language • Community
@@ -596,7 +812,10 @@
                 <ul>
 
                     <li>
-                        <a href="index.html" class="active">
+                        <a
+                            href="index.html"
+                            class="active"
+                        >
                             Home
                         </a>
                     </li>
@@ -709,13 +928,11 @@
                     Welcome to Rohingya Education School
                 </h3>
 
-
                 <img
                     src="water.jpg"
                     class="welcome-photo"
                     alt="Rohingya Education School"
                 >
-
 
                 <p>
 
@@ -759,11 +976,9 @@
                     </h3>
 
                     <p>
-
                         Supporting students with useful
                         knowledge, skills and learning
                         opportunities.
-
                     </p>
 
                 </div>
@@ -776,10 +991,8 @@
                     </h3>
 
                     <p>
-
                         Encouraging language practice,
                         literacy and communication skills.
-
                     </p>
 
                 </div>
@@ -792,10 +1005,8 @@
                     </h3>
 
                     <p>
-
                         Building a positive learning community
                         through cooperation and participation.
-
                     </p>
 
                 </div>
@@ -831,10 +1042,8 @@
                     </h3>
 
                     <p>
-
                         Academic learning and educational
                         practice for students.
-
                     </p>
 
                 </div>
@@ -847,10 +1056,8 @@
                     </h3>
 
                     <p>
-
                         Developing reading, writing,
                         speaking and communication skills.
-
                     </p>
 
                 </div>
@@ -863,10 +1070,8 @@
                     </h3>
 
                     <p>
-
                         Encouraging creativity, teamwork
                         and active participation.
-
                     </p>
 
                 </div>
@@ -902,10 +1107,8 @@
                     </h3>
 
                     <p>
-
                         Important school information and
                         announcements.
-
                     </p>
 
                 </div>
@@ -918,10 +1121,8 @@
                     </h3>
 
                     <p>
-
                         Updates about educational learning
                         and study opportunities.
-
                     </p>
 
                 </div>
@@ -934,10 +1135,8 @@
                     </h3>
 
                     <p>
-
                         Information about learning and
                         community participation.
-
                     </p>
 
                 </div>
@@ -961,9 +1160,8 @@
 
                 <p class="section-intro">
 
-                    Verify certificates, student cards and
-                    teacher cards directly from Rohingya
-                    Education School.
+                    Enter a verification code below to verify
+                    a certificate, student card or teacher card.
 
                 </p>
 
@@ -984,19 +1182,32 @@
                         </h3>
 
                         <p>
-
-                            Verify an official school
-                            certificate using its
+                            Enter the certificate
                             verification code.
-
                         </p>
 
-                        <a
-                            href="verify.html"
+
+                        <input
+                            type="text"
+                            id="certificateCode"
+                            class="verification-input"
+                            placeholder="Enter Certificate Code"
+                            autocomplete="off"
+                        >
+
+
+                        <button
                             class="verification-btn"
+                            onclick="verifyCertificate()"
                         >
                             Verify Certificate
-                        </a>
+                        </button>
+
+
+                        <div
+                            id="certificateResult"
+                            class="verification-result"
+                        ></div>
 
                     </div>
 
@@ -1014,18 +1225,32 @@
                         </h3>
 
                         <p>
-
-                            Verify a student card using
-                            the student's verification code.
-
+                            Enter a student code such as
+                            STU001 or STU1000.
                         </p>
 
-                        <a
-                            href="student-verification.html"
+
+                        <input
+                            type="text"
+                            id="studentCode"
+                            class="verification-input"
+                            placeholder="Enter Student Code"
+                            autocomplete="off"
+                        >
+
+
+                        <button
                             class="verification-btn"
+                            onclick="verifyStudent()"
                         >
                             Verify Student Card
-                        </a>
+                        </button>
+
+
+                        <div
+                            id="studentResult"
+                            class="verification-result"
+                        ></div>
 
                     </div>
 
@@ -1043,18 +1268,32 @@
                         </h3>
 
                         <p>
-
-                            Verify a teacher card using
-                            the teacher's verification code.
-
+                            Enter a teacher code such as
+                            TCH001 or TCH1000.
                         </p>
 
-                        <a
-                            href="teacher-verification.html"
+
+                        <input
+                            type="text"
+                            id="teacherCode"
+                            class="verification-input"
+                            placeholder="Enter Teacher Code"
+                            autocomplete="off"
+                        >
+
+
+                        <button
                             class="verification-btn"
+                            onclick="verifyTeacher()"
                         >
                             Verify Teacher Card
-                        </a>
+                        </button>
+
+
+                        <div
+                            id="teacherResult"
+                            class="verification-result"
+                        ></div>
 
                     </div>
 
@@ -1205,26 +1444,26 @@
             <div>
 
                 <h3>
-                    Verification
+                    Important
                 </h3>
 
                 <ul>
 
                     <li>
-                        <a href="verify.html">
-                            Certificate Verification
+                        <a href="teachers-students.html">
+                            Teachers & Students
                         </a>
                     </li>
 
                     <li>
-                        <a href="student-verification.html">
-                            Student Card Verification
+                        <a href="get-involved.html">
+                            Get Involved
                         </a>
                     </li>
 
                     <li>
-                        <a href="teacher-verification.html">
-                            Teacher Card Verification
+                        <a href="contact.html">
+                            Contact
                         </a>
                     </li>
 
@@ -1247,10 +1486,15 @@
 
 
     <!-- =========================
-         MOBILE MENU
+         JAVASCRIPT
     ========================= -->
 
     <script>
+
+
+        /* =========================
+           MOBILE MENU
+        ========================= */
 
         function toggleMenu() {
 
@@ -1278,6 +1522,298 @@
                 );
 
             });
+
+
+        /* =========================
+           CERTIFICATE VERIFICATION
+        ========================= */
+
+        function verifyCertificate() {
+
+            const input =
+                document
+                    .getElementById("certificateCode");
+
+            const result =
+                document
+                    .getElementById("certificateResult");
+
+            const code =
+                input.value
+                    .trim()
+                    .toUpperCase();
+
+
+            result.style.display = "block";
+
+
+            if (code === "020250424") {
+
+                result.innerHTML = `
+                    <img
+                        src="020250424.jpg"
+                        alt="Verified Certificate"
+                    >
+                `;
+
+            } else {
+
+                result.innerHTML = `
+                    <div class="not-found">
+                        Certificate Not Found
+                    </div>
+                `;
+
+            }
+
+        }
+
+
+        /* =========================
+           STUDENT VERIFICATION
+        ========================= */
+
+        function verifyStudent() {
+
+            const input =
+                document
+                    .getElementById("studentCode");
+
+            const result =
+                document
+                    .getElementById("studentResult");
+
+            const code =
+                input.value
+                    .trim()
+                    .toUpperCase();
+
+
+            const match =
+                code.match(/^STU([0-9]{3,4})$/);
+
+
+            result.style.display = "block";
+
+
+            if (!match) {
+
+                result.innerHTML = `
+                    <div class="not-found">
+                        Invalid Student Verification Code
+                    </div>
+                `;
+
+                return;
+            }
+
+
+            const number =
+                parseInt(match[1], 10);
+
+
+            if (
+                number < 1 ||
+                number > 1000
+            ) {
+
+                result.innerHTML = `
+                    <div class="not-found">
+                        Student Card Not Found
+                    </div>
+                `;
+
+                return;
+            }
+
+
+            const formattedNumber =
+                String(number).padStart(3, "0");
+
+
+            const imageFile =
+                "STU" +
+                formattedNumber +
+                ".jpg";
+
+
+            const image =
+                new Image();
+
+
+            image.onload = function() {
+
+                result.innerHTML = `
+                    <img
+                        src="${imageFile}"
+                        alt="Verified Student Card"
+                    >
+                `;
+
+            };
+
+
+            image.onerror = function() {
+
+                result.innerHTML = `
+                    <div class="not-found">
+                        Student Card Not Found
+                    </div>
+                `;
+
+            };
+
+
+            image.src = imageFile;
+
+        }
+
+
+        /* =========================
+           TEACHER VERIFICATION
+        ========================= */
+
+        function verifyTeacher() {
+
+            const input =
+                document
+                    .getElementById("teacherCode");
+
+            const result =
+                document
+                    .getElementById("teacherResult");
+
+            const code =
+                input.value
+                    .trim()
+                    .toUpperCase();
+
+
+            const match =
+                code.match(/^TCH([0-9]{3,4})$/);
+
+
+            result.style.display = "block";
+
+
+            if (!match) {
+
+                result.innerHTML = `
+                    <div class="not-found">
+                        Invalid Teacher Verification Code
+                    </div>
+                `;
+
+                return;
+            }
+
+
+            const number =
+                parseInt(match[1], 10);
+
+
+            if (
+                number < 1 ||
+                number > 1000
+            ) {
+
+                result.innerHTML = `
+                    <div class="not-found">
+                        Teacher Card Not Found
+                    </div>
+                `;
+
+                return;
+            }
+
+
+            const formattedNumber =
+                String(number).padStart(3, "0");
+
+
+            const imageFile =
+                "TCH" +
+                formattedNumber +
+                ".jpg";
+
+
+            const image =
+                new Image();
+
+
+            image.onload = function() {
+
+                result.innerHTML = `
+                    <img
+                        src="${imageFile}"
+                        alt="Verified Teacher Card"
+                    >
+                `;
+
+            };
+
+
+            image.onerror = function() {
+
+                result.innerHTML = `
+                    <div class="not-found">
+                        Teacher Card Not Found
+                    </div>
+                `;
+
+            };
+
+
+            image.src = imageFile;
+
+        }
+
+
+        /* =========================
+           ENTER KEY SUPPORT
+        ========================= */
+
+        document
+            .getElementById("certificateCode")
+            .addEventListener(
+                "keydown",
+                function(event) {
+
+                    if (event.key === "Enter") {
+                        verifyCertificate();
+                    }
+
+                }
+            );
+
+
+        document
+            .getElementById("studentCode")
+            .addEventListener(
+                "keydown",
+                function(event) {
+
+                    if (event.key === "Enter") {
+                        verifyStudent();
+                    }
+
+                }
+            );
+
+
+        document
+            .getElementById("teacherCode")
+            .addEventListener(
+                "keydown",
+                function(event) {
+
+                    if (event.key === "Enter") {
+                        verifyTeacher();
+                    }
+
+                }
+            );
+
 
     </script>
 
