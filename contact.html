@@ -2,8 +2,13 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Contact - Rohingya Education School</title>
 
@@ -237,6 +242,40 @@
 
         .contact-card p {
             margin-bottom: 0;
+        }
+
+        .contact-card a {
+            color: #14532d;
+            font-weight: bold;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* SOCIAL LINKS */
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-btn {
+            display: inline-block;
+            padding: 10px 17px;
+            border-radius: 8px;
+            background: #14532d;
+            color: white !important;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .social-btn:hover {
+            background: #166534;
+            transform: translateY(-2px);
+            text-decoration: none !important;
         }
 
         /* CONTACT FORM */
@@ -516,6 +555,14 @@
             .send-btn {
                 width: 100%;
             }
+
+            .social-links {
+                flex-direction: column;
+            }
+
+            .social-btn {
+                text-align: center;
+            }
         }
 
     </style>
@@ -524,6 +571,7 @@
 
 
 <body>
+
 
     <!-- HEADER -->
 
@@ -686,8 +734,8 @@
             <p>
                 If you have a question about the school,
                 education, courses, activities or certificate
-                verification, you can send us a message using
-                the contact form below.
+                verification, you can contact us using the
+                information below or send us a message.
             </p>
 
         </section>
@@ -704,6 +752,73 @@
             <div class="contact-grid">
 
 
+                <!-- ADDRESS -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <h3>
+                        Address
+                    </h3>
+
+                    <p>
+                        Boroitoli, Camp 4, Kutupalong
+                    </p>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        📞
+                    </div>
+
+                    <h3>
+                        Phone
+                    </h3>
+
+                    <p>
+                        <a href="tel:01719035941">
+                            01719035941
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <!-- WHATSAPP -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        💬
+                    </div>
+
+                    <h3>
+                        WhatsApp
+                    </h3>
+
+                    <p>
+                        <a
+                            href="https://wa.me/8801719035941"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            01719-035941
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
                 <div class="contact-card">
 
                     <div class="contact-icon">
@@ -715,29 +830,126 @@
                     </h3>
 
                     <p>
-                        rohingyaeducations@gmail.com
+                        <a
+                            href="mailto:rohingyaeducations@gmail.com"
+                        >
+                            rohingyaeducations@gmail.com
+                        </a>
                     </p>
 
                 </div>
 
+
+                <!-- FACEBOOK -->
 
                 <div class="contact-card">
 
                     <div class="contact-icon">
-                        💬
+                        📘
                     </div>
 
                     <h3>
-                        General Enquiries
+                        Facebook
                     </h3>
 
                     <p>
-                        You can use the message form below
-                        for general questions and enquiries.
+                        Visit our Facebook page.
                     </p>
+
+                    <div class="social-links">
+
+                        <a
+                            class="social-btn"
+                            href="https://www.facebook.com/share/19yzcx1FyR/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Visit Facebook
+                        </a>
+
+                    </div>
 
                 </div>
 
+
+                <!-- YOUTUBE -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        ▶️
+                    </div>
+
+                    <h3>
+                        YouTube
+                    </h3>
+
+                    <p>
+                        Visit our YouTube channel.
+                    </p>
+
+                    <div class="social-links">
+
+                        <a
+                            class="social-btn"
+                            href="https://youtube.com/@rohingyaeducationschool941?si=gYAGD7hy3PLC_ohS"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Visit YouTube
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- SOCIAL MEDIA -->
+
+        <section class="section">
+
+            <h2>
+                Connect With Us
+            </h2>
+
+            <p>
+                You can also follow Rohingya Education School
+                through our social media channels.
+            </p>
+
+            <div class="social-links">
+
+                <a
+                    class="social-btn"
+                    href="https://www.facebook.com/share/19yzcx1FyR/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    📘 Facebook
+                </a>
+
+                <a
+                    class="social-btn"
+                    href="https://youtube.com/@rohingyaeducationschool941?si=gYAGD7hy3PLC_ohS"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    ▶️ YouTube
+                </a>
+
+                <a
+                    class="social-btn"
+                    href="https://wa.me/8801719035941"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    💬 WhatsApp
+                </a>
 
             </div>
 
@@ -764,7 +976,7 @@
                 method="POST"
             >
 
-                <!-- FormSubmit Settings -->
+                <!-- FORMSUBMIT SETTINGS -->
 
                 <input
                     type="hidden"
@@ -891,11 +1103,10 @@
                 </h3>
 
                 <p>
-                    When the form is submitted for the first
-                    time, FormSubmit may send a confirmation
-                    email to the school's email address.
-                    Please complete that confirmation so
-                    future messages can be delivered.
+                    When the form is submitted, the message
+                    will be sent to the school's official email
+                    address. FormSubmit may use reCAPTCHA to
+                    help prevent spam.
                 </p>
 
             </div>
