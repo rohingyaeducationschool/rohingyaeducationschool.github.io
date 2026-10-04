@@ -67,7 +67,6 @@
         .brand img {
             width: 58px;
             height: 58px;
-
             border-radius: 50%;
             object-fit: contain;
         }
@@ -124,7 +123,6 @@
             border: none;
 
             padding: 9px 12px;
-
             border-radius: 7px;
 
             font-size: 22px;
@@ -169,12 +167,20 @@
 
             object-fit: contain;
 
+            top: 50%;
+            left: 50%;
+
+            transform:
+                translate(-50%, -50%);
+
             pointer-events: none;
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
+
+            max-width: 850px;
 
             padding: 55px 20px;
         }
@@ -433,7 +439,8 @@
 
             padding: 12px 13px;
 
-            border: 1px solid #cbd5e1;
+            border:
+                1px solid #cbd5e1;
 
             border-radius: 8px;
 
@@ -452,7 +459,8 @@
             border-color: #14532d;
 
             box-shadow:
-                0 0 0 3px rgba(20,83,45,0.10);
+                0 0 0 3px
+                rgba(20,83,45,0.10);
         }
 
         .verification-btn {
@@ -505,7 +513,8 @@
 
             background: #fef2f2;
 
-            border: 1px solid #fecaca;
+            border:
+                1px solid #fecaca;
 
             padding: 10px;
 
@@ -625,7 +634,8 @@
             text-align: center;
 
             border-top:
-                1px solid rgba(255,255,255,0.12);
+                1px solid
+                rgba(255,255,255,0.12);
 
             padding: 18px 20px;
 
@@ -741,6 +751,7 @@
 
             .welcome-photo {
                 height: 300px;
+
                 border-radius: 12px;
             }
 
@@ -1182,8 +1193,8 @@
                         </h3>
 
                         <p>
-                            Enter the certificate
-                            verification code.
+                            Enter the code printed on the
+                            certificate.
                         </p>
 
 
@@ -1193,6 +1204,7 @@
                             class="verification-input"
                             placeholder="Enter Certificate Code"
                             autocomplete="off"
+                            inputmode="numeric"
                         >
 
 
@@ -1225,8 +1237,8 @@
                         </h3>
 
                         <p>
-                            Enter a student code such as
-                            STU001 or STU1000.
+                            Enter the code printed on the
+                            student card.
                         </p>
 
 
@@ -1234,8 +1246,9 @@
                             type="text"
                             id="studentCode"
                             class="verification-input"
-                            placeholder="Enter Student Code"
+                            placeholder="Enter Student Card Code"
                             autocomplete="off"
+                            inputmode="numeric"
                         >
 
 
@@ -1268,8 +1281,8 @@
                         </h3>
 
                         <p>
-                            Enter a teacher code such as
-                            TCH001 or TCH1000.
+                            Enter a teacher card code or
+                            search by position/name.
                         </p>
 
 
@@ -1277,7 +1290,7 @@
                             type="text"
                             id="teacherCode"
                             class="verification-input"
-                            placeholder="Enter Teacher Code"
+                            placeholder="Code or Principal / Vice Principal"
                             autocomplete="off"
                         >
 
@@ -1525,38 +1538,109 @@
 
 
         /* =========================
+           SHOW IMAGE
+        ========================= */
+
+        function showVerificationImage(
+            imageFile,
+            result,
+            successMessage
+        ) {
+
+            result.style.display = "block";
+
+            const image = new Image();
+
+            image.onload = function() {
+
+                result.innerHTML = `
+                    <img
+                        src="${imageFile}"
+                        alt="${successMessage}"
+                    >
+                `;
+
+            };
+
+
+            image.onerror = function() {
+
+                result.innerHTML = `
+                    <div class="not-found">
+                        Card Not Found
+                    </div>
+                `;
+
+            };
+
+
+            image.src = imageFile;
+
+        }
+
+
+        /* =========================
            CERTIFICATE VERIFICATION
         ========================= */
 
         function verifyCertificate() {
 
             const input =
-                document
-                    .getElementById("certificateCode");
+                document.getElementById(
+                    "certificateCode"
+                );
 
             const result =
-                document
-                    .getElementById("certificateResult");
+                document.getElementById(
+                    "certificateResult"
+                );
+
 
             const code =
-                input.value
-                    .trim()
-                    .toUpperCase();
+                input.value.trim();
 
 
             result.style.display = "block";
 
 
-            if (code === "020250424") {
+            if (
+                code === "" ||
+                !/^[0-9]+$/.test(code)
+            ) {
+
+                result.innerHTML = `
+                    <div class="not-found">
+                        Please enter a valid Certificate Code
+                    </div>
+                `;
+
+                return;
+
+            }
+
+
+            const imageFile =
+                "certificates/" +
+                code +
+                ".jpg";
+
+
+            const image = new Image();
+
+
+            image.onload = function() {
 
                 result.innerHTML = `
                     <img
-                        src="020250424.jpg"
+                        src="${imageFile}"
                         alt="Verified Certificate"
                     >
                 `;
 
-            } else {
+            };
+
+
+            image.onerror = function() {
 
                 result.innerHTML = `
                     <div class="not-found">
@@ -1564,7 +1648,10 @@
                     </div>
                 `;
 
-            }
+            };
+
+
+            image.src = imageFile;
 
         }
 
@@ -1576,69 +1663,46 @@
         function verifyStudent() {
 
             const input =
-                document
-                    .getElementById("studentCode");
+                document.getElementById(
+                    "studentCode"
+                );
 
             const result =
-                document
-                    .getElementById("studentResult");
+                document.getElementById(
+                    "studentResult"
+                );
+
 
             const code =
-                input.value
-                    .trim()
-                    .toUpperCase();
-
-
-            const match =
-                code.match(/^STU([0-9]{3,4})$/);
+                input.value.trim();
 
 
             result.style.display = "block";
 
 
-            if (!match) {
-
-                result.innerHTML = `
-                    <div class="not-found">
-                        Invalid Student Verification Code
-                    </div>
-                `;
-
-                return;
-            }
-
-
-            const number =
-                parseInt(match[1], 10);
-
-
             if (
-                number < 1 ||
-                number > 1000
+                code === "" ||
+                !/^[0-9]+$/.test(code)
             ) {
 
                 result.innerHTML = `
                     <div class="not-found">
-                        Student Card Not Found
+                        Please enter a valid Student Card Code
                     </div>
                 `;
 
                 return;
+
             }
 
 
-            const formattedNumber =
-                String(number).padStart(3, "0");
-
-
             const imageFile =
-                "STU" +
-                formattedNumber +
+                "student-cards/" +
+                code +
                 ".jpg";
 
 
-            const image =
-                new Image();
+            const image = new Image();
 
 
             image.onload = function() {
@@ -1670,51 +1734,118 @@
 
 
         /* =========================
+           TEACHER ROLE MAP
+        ========================= */
+
+        const teacherMembers = {
+
+            "principal":
+                "teacher-cards/principal.jpg",
+
+            "vice principal":
+                "teacher-cards/vice-principal.jpg",
+
+            "head teacher":
+                "teacher-cards/head-teacher.jpg",
+
+            "assistant head teacher":
+                "teacher-cards/assistant-head-teacher.jpg"
+
+        };
+
+
+        /* =========================
            TEACHER VERIFICATION
         ========================= */
 
         function verifyTeacher() {
 
             const input =
-                document
-                    .getElementById("teacherCode");
+                document.getElementById(
+                    "teacherCode"
+                );
 
             const result =
-                document
-                    .getElementById("teacherResult");
+                document.getElementById(
+                    "teacherResult"
+                );
+
 
             const code =
                 input.value
                     .trim()
-                    .toUpperCase();
-
-
-            const match =
-                code.match(/^TCH([0-9]{3,4})$/);
+                    .toLowerCase();
 
 
             result.style.display = "block";
 
 
-            if (!match) {
+            if (code === "") {
 
                 result.innerHTML = `
                     <div class="not-found">
-                        Invalid Teacher Verification Code
+                        Please enter a Teacher Card Code
+                        or position/name.
                     </div>
                 `;
 
                 return;
+
             }
 
 
-            const number =
-                parseInt(match[1], 10);
-
+            /* =========================
+               TEACHER POSITION SEARCH
+            ========================= */
 
             if (
-                number < 1 ||
-                number > 1000
+                teacherMembers
+                    .hasOwnProperty(code)
+            ) {
+
+                const imageFile =
+                    teacherMembers[code];
+
+
+                const image = new Image();
+
+
+                image.onload = function() {
+
+                    result.innerHTML = `
+                        <img
+                            src="${imageFile}"
+                            alt="Verified Teacher Card"
+                        >
+                    `;
+
+                };
+
+
+                image.onerror = function() {
+
+                    result.innerHTML = `
+                        <div class="not-found">
+                            Teacher Card Not Found
+                        </div>
+                    `;
+
+                };
+
+
+                image.src = imageFile;
+
+                return;
+
+            }
+
+
+            /* =========================
+               TEACHER NUMERIC CODE
+            ========================= */
+
+            if (
+                !/^[0-9]+$/.test(code)
             ) {
 
                 result.innerHTML = `
@@ -1724,21 +1855,17 @@
                 `;
 
                 return;
+
             }
 
 
-            const formattedNumber =
-                String(number).padStart(3, "0");
-
-
             const imageFile =
-                "TCH" +
-                formattedNumber +
+                "teacher-cards/" +
+                code +
                 ".jpg";
 
 
-            const image =
-                new Image();
+            const image = new Image();
 
 
             image.onload = function() {
@@ -1780,7 +1907,9 @@
                 function(event) {
 
                     if (event.key === "Enter") {
+
                         verifyCertificate();
+
                     }
 
                 }
@@ -1794,7 +1923,9 @@
                 function(event) {
 
                     if (event.key === "Enter") {
+
                         verifyStudent();
+
                     }
 
                 }
@@ -1808,7 +1939,9 @@
                 function(event) {
 
                     if (event.key === "Enter") {
+
                         verifyTeacher();
+
                     }
 
                 }
