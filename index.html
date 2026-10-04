@@ -134,8 +134,6 @@
             color: white;
         }
 
-        /* PNG LOGO WATERMARK */
-
         .watermark {
             position: absolute;
             width: 500px;
@@ -150,8 +148,6 @@
             z-index: 2;
             padding: 55px 20px;
         }
-
-        /* JPG LOGO IN THE CENTER */
 
         .hero-logo {
             width: 180px;
@@ -267,6 +263,79 @@
             margin: 0 auto 25px;
             border-radius: 16px;
             box-shadow: 0 6px 22px rgba(0,0,0,0.14);
+        }
+
+        /* =========================
+           VERIFICATION CENTER
+        ========================= */
+
+        .verification-section {
+            background: #ffffff;
+            padding: 40px 25px;
+            border-radius: 18px;
+            box-shadow: 0 5px 22px rgba(0,0,0,0.08);
+        }
+
+        .verification-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 30px;
+        }
+
+        .verification-card {
+            background: #f8faf9;
+            border: 1px solid #dce9df;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .verification-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+        }
+
+        .verification-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: #e8f5e9;
+            color: #14532d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .verification-card h3 {
+            color: #14532d;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .verification-card p {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .verification-btn {
+            display: inline-block;
+            background: #14532d;
+            color: white;
+            text-decoration: none;
+            padding: 11px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background 0.2s ease;
+        }
+
+        .verification-btn:hover {
+            background: #0f3f22;
         }
 
         /* =========================
@@ -398,10 +467,13 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            .verification-cards {
+                grid-template-columns: 1fr;
+            }
+
             .footer-inner {
                 grid-template-columns: 1fr 1fr;
             }
-
         }
 
         @media (max-width: 600px) {
@@ -461,14 +533,22 @@
                 border-radius: 12px;
             }
 
+            .verification-section {
+                padding: 30px 15px;
+            }
+
+            .verification-card {
+                padding: 25px 18px;
+            }
+
             .footer-inner {
                 grid-template-columns: 1fr;
                 gap: 25px;
             }
-
         }
 
     </style>
+
 </head>
 
 
@@ -564,12 +644,6 @@
                     </li>
 
                     <li>
-                        <a href="verify.html">
-                            Verify Certificate
-                        </a>
-                    </li>
-
-                    <li>
                         <a href="contact.html">
                             Contact
                         </a>
@@ -590,8 +664,6 @@
 
     <section class="hero">
 
-        <!-- PNG LOGO AS WATERMARK -->
-
         <img
             src="logo.png"
             class="watermark"
@@ -600,8 +672,6 @@
 
 
         <div class="hero-content">
-
-            <!-- JPG LOGO IN CENTER -->
 
             <img
                 src="profile.jpg"
@@ -640,8 +710,6 @@
                 </h3>
 
 
-                <!-- HOME PAGE PHOTO -->
-
                 <img
                     src="water.jpg"
                     class="welcome-photo"
@@ -654,7 +722,6 @@
                     Rohingya Education School is committed to
                     supporting learning, language development,
                     education and community participation.
-
                     Our aim is to create a supportive learning
                     environment where students can learn,
                     develop their skills and grow together.
@@ -880,6 +947,125 @@
         </section>
 
 
+        <!-- =========================
+             VERIFICATION CENTER
+        ========================= -->
+
+        <section class="section">
+
+            <div class="verification-section">
+
+                <h2 class="section-title">
+                    Verification Center
+                </h2>
+
+                <p class="section-intro">
+
+                    Verify certificates, student cards and
+                    teacher cards directly from Rohingya
+                    Education School.
+
+                </p>
+
+
+                <div class="verification-cards">
+
+
+                    <!-- CERTIFICATE -->
+
+                    <div class="verification-card">
+
+                        <div class="verification-icon">
+                            🎓
+                        </div>
+
+                        <h3>
+                            Certificate Verification
+                        </h3>
+
+                        <p>
+
+                            Verify an official school
+                            certificate using its
+                            verification code.
+
+                        </p>
+
+                        <a
+                            href="verify.html"
+                            class="verification-btn"
+                        >
+                            Verify Certificate
+                        </a>
+
+                    </div>
+
+
+                    <!-- STUDENT -->
+
+                    <div class="verification-card">
+
+                        <div class="verification-icon">
+                            🧑‍🎓
+                        </div>
+
+                        <h3>
+                            Student Card Verification
+                        </h3>
+
+                        <p>
+
+                            Verify a student card using
+                            the student's verification code.
+
+                        </p>
+
+                        <a
+                            href="student-verification.html"
+                            class="verification-btn"
+                        >
+                            Verify Student Card
+                        </a>
+
+                    </div>
+
+
+                    <!-- TEACHER -->
+
+                    <div class="verification-card">
+
+                        <div class="verification-icon">
+                            👨‍🏫
+                        </div>
+
+                        <h3>
+                            Teacher Card Verification
+                        </h3>
+
+                        <p>
+
+                            Verify a teacher card using
+                            the teacher's verification code.
+
+                        </p>
+
+                        <a
+                            href="teacher-verification.html"
+                            class="verification-btn"
+                        >
+                            Verify Teacher Card
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
         <!-- GET INVOLVED -->
 
         <section class="section">
@@ -1006,8 +1192,8 @@
                     </li>
 
                     <li>
-                        <a href="verify.html">
-                            Verify Certificate
+                        <a href="contact.html">
+                            Contact
                         </a>
                     </li>
 
@@ -1019,32 +1205,33 @@
             <div>
 
                 <h3>
-                    Important
+                    Verification
                 </h3>
 
                 <ul>
 
                     <li>
-                        <a href="teachers-students.html">
-                            Teachers & Students
+                        <a href="verify.html">
+                            Certificate Verification
                         </a>
                     </li>
 
                     <li>
-                        <a href="get-involved.html">
-                            Get Involved
+                        <a href="student-verification.html">
+                            Student Card Verification
                         </a>
                     </li>
 
                     <li>
-                        <a href="contact.html">
-                            Contact
+                        <a href="teacher-verification.html">
+                            Teacher Card Verification
                         </a>
                     </li>
 
                 </ul>
 
             </div>
+
 
         </div>
 
